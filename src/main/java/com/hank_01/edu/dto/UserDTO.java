@@ -2,7 +2,7 @@ package com.hank_01.edu.dto;
 
 import com.hank_01.edu.Entity.UserEntity;
 import com.hank_01.edu.common.util.BeanUtil;
-import com.hank_01.edu.enums.UserStatusEnum;
+import com.hank_01.edu.enums.UserStatus;
 
 import java.util.Date;
 
@@ -13,7 +13,7 @@ public class UserDTO {
     private String password;
     private String phone;
     private String sex;
-    private UserStatusEnum status;
+    private UserStatus status;
     private Date createTime;
     private Date updateTime;
     private Boolean isDeleted;
@@ -135,11 +135,11 @@ public class UserDTO {
         this.sex = sex;
     }
 
-    public UserStatusEnum getStatus() {
+    public UserStatus getStatus() {
         return status;
     }
 
-    public void setStatus(UserStatusEnum status) {
+    public void setStatus(UserStatus status) {
         this.status = status;
     }
 }

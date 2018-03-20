@@ -1,204 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f68fc130-5bbf-4c03-bd0d-4b68db5f0199" name="Default" comment="first">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_3_4.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_4.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_4.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_9_4.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_9_4.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_9_4.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jsqlparser_jsqlparser_1_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_pagehelper_pagehelper_5_1_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_zxing_core_3_3_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_4_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_2_7_8.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_9_3.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_11.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_3_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_3_1_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_2_0_1_Final.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_45.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_7_10.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_7_10.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_1_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_3.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_4.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_10_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_10_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_8_5_28.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_8_5_28.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_8_5_28.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_9_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_attoparser_attoparser_2_0_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_http_9_4_8_v20171121.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_io_9_4_8_v20171121.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_server_9_3_18_v20170406.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_util_9_4_8_v20171121.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_library_1_3.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_0_7_Final.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_2_Final.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_json_json_20180130.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_2_15_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_4_5.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_3_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_autoconfigure_1_3_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_starter_1_3_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_2_6.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_4.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_25.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_0_0_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_0_0_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_0_0_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_0_0_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_0_0_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_0_0_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_0_0_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_thymeleaf_2_0_0_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_0_0_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_0_0_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_0_0_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_0_0_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_0_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_0_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_0_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_0_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_0_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_0_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_0_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_0_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_0_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_0_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_0_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_extras_thymeleaf_extras_java8time_3_0_1_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_3_0_9_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_spring5_3_0_9_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_unbescape_unbescape_1_1_5_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_5_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_19.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/edu.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/mvnw" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/mvnw.cmd" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/myLog.log" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/EduApplication.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/Entity/BaseEntity.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/Entity/UserEntity.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/common/pagination/Pagination.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/common/response/DataResponse.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/common/response/EduResponse.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/common/util/ArrayUtil.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/common/util/AuthImage.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/common/util/BeanUtil.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/common/util/CollectionUtil.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/common/util/CommonResult.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/common/util/CommonUtil.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/common/util/DateUtil.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/common/util/FileExportUtil.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/common/util/Hex62Util.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/common/util/JsonDateDeserializer.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/common/util/JsonDateSerializer.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/common/util/JsonUtils.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/common/util/LocationCodeUtil.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/common/util/MD5Utils.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/common/util/MapUtil.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/common/util/MoneyUtil.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/common/util/NumberUtil.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/common/util/ObjectUtil.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/common/util/POIExcelUtil.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/common/util/PageListHelper.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/common/util/RandomUtil.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/common/util/StringUtil.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/controller/UserController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/dao/UserDao.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/dao/impl/UserDaoImpl.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/dto/UserDTO.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/enums/UserStatusEnum.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/enums/UserTypeEnum.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/enums/errorEnum/UserErrorEnum.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/exception/EduException.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/exception/IEduException.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/exception/handler/GlobalExceptionHandler.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/mapper/UserMapper.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/request/UserRequest.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/service/UserService.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/service/impl/UserServiceImpl.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/hank_01/edu/EduApplicationTests.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/hank_01/edu/userTest/BaseTest.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/hank_01/edu/userTest/UserDaoTest.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/hank_01/edu/userTest/UserServiceTest.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/application.properties" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/application.yml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/hank_01/edu/EduApplication.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/hank_01/edu/Entity/BaseEntity.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/hank_01/edu/Entity/UserEntity.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/hank_01/edu/common/pagination/Pagination.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/hank_01/edu/common/response/DataResponse.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/hank_01/edu/common/response/EduResponse.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/hank_01/edu/common/util/ArrayUtil.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/hank_01/edu/common/util/AuthImage.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/hank_01/edu/common/util/BeanUtil$AsMapModes.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/hank_01/edu/common/util/BeanUtil$CopyPropModes.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/hank_01/edu/common/util/BeanUtil.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/hank_01/edu/common/util/CollectionUtil.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/hank_01/edu/common/util/CommonResult.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/hank_01/edu/common/util/DateUtil.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/hank_01/edu/common/util/FileExportUtil.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/hank_01/edu/common/util/Hex62Util.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/hank_01/edu/common/util/JsonDateDeserializer.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/hank_01/edu/common/util/JsonDateSerializer.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/hank_01/edu/common/util/JsonUtils.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/hank_01/edu/common/util/LocationCodeUtil.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/hank_01/edu/common/util/MD5Utils.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/hank_01/edu/common/util/MapUtil$Entry.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/hank_01/edu/common/util/MapUtil$Filter.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/hank_01/edu/common/util/MapUtil.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/hank_01/edu/common/util/NumberUtil.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/hank_01/edu/common/util/ObjectUtil.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/hank_01/edu/common/util/RandomUtil.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/hank_01/edu/common/util/StringUtil.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/hank_01/edu/controller/UserController.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/hank_01/edu/dao/UserDao.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/hank_01/edu/dao/impl/UserDaoImpl.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/hank_01/edu/dto/UserDTO.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/hank_01/edu/enums/UserStatusEnum.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/hank_01/edu/enums/UserTypeEnum.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/hank_01/edu/enums/errorEnum/UserErrorEnum.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/hank_01/edu/exception/EduException.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/hank_01/edu/exception/IEduException.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/hank_01/edu/exception/handler/GlobalExceptionHandler.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/hank_01/edu/mapper/UserMapper.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/hank_01/edu/request/UserRequest.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/hank_01/edu/service/UserService.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/hank_01/edu/service/impl/UserServiceImpl.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/logback.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/com/hank_01/edu/EduApplicationTests.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/com/hank_01/edu/userTest/BaseTest.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/com/hank_01/edu/userTest/UserDaoTest.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/com/hank_01/edu/userTest/UserServiceTest.class" />
+    <list default="true" id="f68fc130-5bbf-4c03-bd0d-4b68db5f0199" name="Default" comment="增加playerDao 逻辑">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/Entity/PlayerEntity.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/dao/PlayerDao.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/dao/impl/PlayerDaoImpl.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/dto/PlayerDTO.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/enums/AgentType.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/enums/OnLineStatus.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/enums/PlayStatus.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/mapper/PlayerMapper.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/hank_01/edu/playerTest/PlayerDaoTest.java" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/Entity/UserEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/Entity/UserEntity.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/dao/UserDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/dao/UserDao.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/dao/impl/UserDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/dao/impl/UserDaoImpl.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/dto/UserDTO.java" afterPath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/dto/UserDTO.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/enums/UserStatusEnum.java" afterPath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/enums/UserStatus.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/service/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/service/UserService.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/service/impl/UserServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/hank_01/edu/service/impl/UserServiceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/hank_01/edu/userTest/BaseTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/hank_01/edu/BaseTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/hank_01/edu/userTest/UserDaoTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/hank_01/edu/userTest/UserDaoTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/hank_01/edu/userTest/UserServiceTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/hank_01/edu/userTest/UserServiceTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -210,109 +33,33 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="7" column="51" lean-forward="false" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="logback.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/logback.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="24" column="36" lean-forward="false" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hank_01/edu/service/impl/UserServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="53" column="40" lean-forward="false" selection-start-line="53" selection-start-column="40" selection-end-line="53" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1184#1185#0" expanded="true" />
-                <element signature="e#1211#1212#0" expanded="true" />
-                <element signature="e#1296#1297#0" expanded="true" />
-                <element signature="e#1323#1324#0" expanded="true" />
-                <element signature="e#1998#1999#0" expanded="true" />
-                <element signature="e#2025#2026#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hank_01/edu/controller/UserController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2013">
-              <caret line="117" column="20" lean-forward="false" selection-start-line="117" selection-start-column="20" selection-end-line="117" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GlobalExceptionHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hank_01/edu/exception/handler/GlobalExceptionHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="11" column="23" lean-forward="false" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserErrorEnum.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hank_01/edu/enums/errorEnum/UserErrorEnum.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="7" column="57" lean-forward="false" selection-start-line="7" selection-start-column="57" selection-end-line="7" selection-end-column="57" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="spring-beans.schema" />
         <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="spring-beans.schema" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
-        <option value="test1" />
-        <option value="test" />
         <option value="15514920226m@sina.cn" />
         <option value="hank" />
+        <option value="test1" />
+        <option value="test" />
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -322,12 +69,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/hank_01/edu/Entity/Employee.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hank_01/edu/request/UpdateReq.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hank_01/edu/mapper/EmployeeMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hank_01/edu/service/EmployeeSevice.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hank_01/edu/service/impl/EmployeeServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hank_01/edu/controller/HelloWord.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hank_01/edu/common/util/ArrayUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hank_01/edu/Entitys/UserEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hank_01/edu/enums/UserTypeEnum.java" />
@@ -369,6 +110,16 @@
         <option value="$PROJECT_DIR$/src/main/resources/logback.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/hank_01/edu/service/impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hank_01/edu/enums/PlayStatus.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hank_01/edu/enums/UserStatus.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hank_01/edu/enums/OnLineStatus.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hank_01/edu/enums/AgentType.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hank_01/edu/Entity/PlayerEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hank_01/edu/dto/PlayerDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hank_01/edu/mapper/PlayerMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hank_01/edu/dao/PlayerDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hank_01/edu/dao/impl/PlayerDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/hank_01/edu/playerTest/PlayerDaoTest.java" />
       </list>
     </option>
   </component>
@@ -424,11 +175,10 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-80" />
-    <option name="y" value="63" />
-    <option name="width" value="1210" />
-    <option name="height" value="1021" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="325" />
+    <option name="width" value="1603" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -446,9 +196,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
@@ -457,52 +205,12 @@
               <item name="edu" type="b2602c69:ProjectViewProjectNode" />
               <item name="edu" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="edu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="edu" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="edu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="edu" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="edu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="edu" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="edu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="edu" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="edu" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="edu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="edu" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="edu" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="edu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="edu" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -522,6 +230,9 @@
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.hank_01.edu" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.hank_01.edu.common.io" />
       <recent name="com.hank_01.edu.exception.handler" />
@@ -544,7 +255,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.EduApplication">
+  <component name="RunManager" selected="JUnit.PlayerDaoTest.findByIdTest">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -569,15 +280,15 @@
     <configuration name="BaseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.hank_01.edu.userTest.*" />
+          <option name="PATTERN" value="com.hank_01.edu.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="edu" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.hank_01.edu.userTest" />
-      <option name="MAIN_CLASS_NAME" value="com.hank_01.edu.userTest.BaseTest" />
+      <option name="PACKAGE_NAME" value="com.hank_01.edu" />
+      <option name="MAIN_CLASS_NAME" value="com.hank_01.edu.BaseTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -591,19 +302,19 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="BaseTest.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PlayerDaoTest.findByIdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.hank_01.edu.userTest.*" />
+          <option name="PATTERN" value="com.hank_01.edu.playerTest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="edu" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.hank_01.edu.userTest" />
-      <option name="MAIN_CLASS_NAME" value="com.hank_01.edu.userTest.BaseTest" />
-      <option name="METHOD_NAME" value="test1" />
+      <option name="PACKAGE_NAME" value="com.hank_01.edu.playerTest" />
+      <option name="MAIN_CLASS_NAME" value="com.hank_01.edu.playerTest.PlayerDaoTest" />
+      <option name="METHOD_NAME" value="findByIdTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -619,7 +330,7 @@
     <configuration name="UserDaoTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.hank_01.edu.userTest.*" />
+          <option name="PATTERN" value="com.hank_01.edu.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -644,7 +355,7 @@
     <configuration name="UserServiceTest.findByConditionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.hank_01.edu.userTest.*" />
+          <option name="PATTERN" value="com.hank_01.edu.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -669,7 +380,7 @@
     <configuration name="UserServiceTest.registerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.hank_01.edu.userTest.*" />
+          <option name="PATTERN" value="com.hank_01.edu.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -759,19 +470,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Spring Boot.EduApplication" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.BaseTest.test1" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.BaseTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.UserDaoTest.test" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.UserServiceTest.findByConditionTest" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.UserServiceTest.registerTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.BaseTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.UserDaoTest.test" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.UserServiceTest.findByConditionTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.UserServiceTest.registerTest" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.PlayerDaoTest.findByIdTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.UserServiceTest.registerTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.UserServiceTest.findByConditionTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.UserDaoTest.test" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.BaseTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.BaseTest.test1" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.PlayerDaoTest.findByIdTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.UserServiceTest.registerTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.UserServiceTest.findByConditionTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.UserDaoTest.test" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.BaseTest" />
       </list>
     </recent_temporary>
   </component>
@@ -799,13 +510,14 @@
       <workItem from="1521467249819" duration="2196000" />
       <workItem from="1521472684119" duration="3097000" />
       <workItem from="1521475935710" duration="2319000" />
-      <workItem from="1521525963096" duration="10372000" />
+      <workItem from="1521525963096" duration="11568000" />
+      <workItem from="1521558149726" duration="4494000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UserServiceTest_registerTest - 2018.03.19 at 16h 55m 34s.xml">
-      <configuration name="UserServiceTest.registerTest" configurationId="JUnit" />
+    <history-entry file="PlayerDaoTest_findByIdTest - 2018.03.21 at 00h 36m 20s.xml">
+      <configuration name="PlayerDaoTest.findByIdTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="UserServiceTest_registerTest - 2018.03.19 at 16h 57m 56s.xml">
       <configuration name="UserServiceTest.registerTest" configurationId="JUnit" />
@@ -836,33 +548,32 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71606000" />
+    <option name="totallyTimeSpent" value="77296000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
-    <editor active="true" />
+    <frame x="325" y="0" width="1603" height="1038" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34428087" sideWeight="0.50214595" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.021995708" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.026814912" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5911665" sideWeight="0.49785408" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21764033" sideWeight="0.49785408" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32842582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32760596" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.49570817" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33333334" sideWeight="0.49570817" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2400906" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23229614" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3466318" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -916,11 +627,20 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first" />
-    <option name="LAST_COMMIT_MESSAGE" value="first" />
+    <MESSAGE value="增加playerDao 逻辑" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加playerDao 逻辑" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="34" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/hank_01/edu/playerTest/PlayerDaoTest.java</url>
+          <line>15</line>
+          <properties />
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="35" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -929,90 +649,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hank_01/edu/common/util/AuthImage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="15" lean-forward="false" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hank_01/edu/common/util/CollectionUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="7" lean-forward="false" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hank_01/edu/common/util/DateUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="28" lean-forward="true" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hank_01/edu/common/util/CommonUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="777">
-          <caret line="107" column="46" lean-forward="true" selection-start-line="107" selection-start-column="46" selection-end-line="107" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.8.2/junit-4.8.2.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="10" column="33" lean-forward="true" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/hank_01/edu/EduApplicationTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hank_01/edu/Entity/BaseEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="11" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/hank_01/edu/userTest/BaseTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="15" column="26" lean-forward="true" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/hank_01/edu/userTest/UserDaoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hank_01/edu/common/pagination/Pagination.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hank_01/edu/dao/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="12" lean-forward="false" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hank_01/edu/Entity/UserEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hank_01/edu/service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -1076,20 +712,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hank_01/edu/dto/UserDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="20" column="23" lean-forward="false" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hank_01/edu/enums/UserStatusEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.4.RELEASE/spring-webmvc-5.0.4.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -1124,14 +746,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hank_01/edu/exception/handler/ZBExceptionResolver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="22" column="63" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hank_01/edu/exception/handler/ZBExceptionResolver.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hank_01/edu/enums/errorEnum/UserErrorEnum.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
@@ -1144,7 +759,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-228">
           <caret line="68" column="7" lean-forward="true" selection-start-line="68" selection-start-column="7" selection-end-line="68" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1160,7 +774,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
           <caret line="2" column="30" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1181,7 +794,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1189,7 +801,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="567">
           <caret line="33" column="31" lean-forward="true" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1203,7 +814,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2013">
+        <state relative-caret-position="2457">
           <caret line="117" column="20" lean-forward="false" selection-start-line="117" selection-start-column="20" selection-end-line="117" selection-end-column="20" />
           <folding />
         </state>
@@ -1229,25 +840,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hank_01/edu/exception/handler/GlobalExceptionHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
+        <state relative-caret-position="176">
           <caret line="11" column="23" lean-forward="false" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/logback-spring.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" column="27" lean-forward="false" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/logback-spring.xml" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/logback.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
+        <state relative-caret-position="504">
           <caret line="24" column="36" lean-forward="false" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
           <folding />
         </state>
@@ -1255,33 +859,267 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hank_01/edu/service/impl/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
+        <state relative-caret-position="756">
           <caret line="53" column="40" lean-forward="false" selection-start-line="53" selection-start-column="40" selection-end-line="53" selection-end-column="40" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1184#1185#0" expanded="true" />
-            <element signature="e#1211#1212#0" expanded="true" />
-            <element signature="e#1296#1297#0" expanded="true" />
-            <element signature="e#1323#1324#0" expanded="true" />
-            <element signature="e#1998#1999#0" expanded="true" />
-            <element signature="e#2025#2026#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1180#1181#0" expanded="false" />
+            <element signature="e#1207#1208#0" expanded="false" />
+            <element signature="e#1288#1289#0" expanded="false" />
+            <element signature="e#1315#1316#0" expanded="false" />
+            <element signature="e#1986#1987#0" expanded="false" />
+            <element signature="e#2013#2014#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="51" lean-forward="false" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hank_01/edu/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+        <state relative-caret-position="210">
+          <caret line="16" column="36" lean-forward="false" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hank_01/edu/enums/UserStatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="25" column="29" lean-forward="false" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hank_01/edu/enums/OnLineStatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="24" lean-forward="true" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hank_01/edu/enums/PlayStatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2">
+          <caret line="12" column="2" lean-forward="false" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hank_01/edu/enums/AgentType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hank_01/edu/Entity/PlayerEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="17" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#583#584#0" expanded="true" />
+            <element signature="e#614#615#0" expanded="true" />
+            <element signature="e#662#663#0" expanded="true" />
+            <element signature="e#702#703#0" expanded="true" />
+            <element signature="e#739#740#0" expanded="true" />
+            <element signature="e#772#773#0" expanded="true" />
+            <element signature="e#824#825#0" expanded="true" />
+            <element signature="e#868#869#0" expanded="true" />
+            <element signature="e#903#904#0" expanded="true" />
+            <element signature="e#934#935#0" expanded="true" />
+            <element signature="e#982#983#0" expanded="true" />
+            <element signature="e#1022#1023#0" expanded="true" />
+            <element signature="e#1052#1053#0" expanded="true" />
+            <element signature="e#1078#1079#0" expanded="true" />
+            <element signature="e#1116#1117#0" expanded="true" />
+            <element signature="e#1146#1147#0" expanded="true" />
+            <element signature="e#1187#1188#0" expanded="true" />
+            <element signature="e#1220#1221#0" expanded="true" />
+            <element signature="e#1276#1277#0" expanded="true" />
+            <element signature="e#1320#1321#0" expanded="true" />
+            <element signature="e#1365#1366#0" expanded="true" />
+            <element signature="e#1400#1401#0" expanded="true" />
+            <element signature="e#1462#1463#0" expanded="true" />
+            <element signature="e#1510#1511#0" expanded="true" />
+            <element signature="e#1545#1546#0" expanded="true" />
+            <element signature="e#1578#1579#0" expanded="true" />
+            <element signature="e#1628#1629#0" expanded="true" />
+            <element signature="e#1672#1673#0" expanded="true" />
+            <element signature="e#1706#1707#0" expanded="true" />
+            <element signature="e#1738#1739#0" expanded="true" />
+            <element signature="e#1786#1787#0" expanded="true" />
+            <element signature="e#1828#1829#0" expanded="true" />
+            <element signature="e#1867#1868#0" expanded="true" />
+            <element signature="e#1899#1900#0" expanded="true" />
+            <element signature="e#1952#1953#0" expanded="true" />
+            <element signature="e#1994#1995#0" expanded="true" />
+            <element signature="e#2034#2035#0" expanded="true" />
+            <element signature="e#2072#2073#0" expanded="true" />
+            <element signature="e#2132#2133#0" expanded="true" />
+            <element signature="e#2186#2187#0" expanded="true" />
+            <element signature="e#2227#2228#0" expanded="true" />
+            <element signature="e#2264#2265#0" expanded="true" />
+            <element signature="e#2324#2325#0" expanded="true" />
+            <element signature="e#2376#2377#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hank_01/edu/Entity/BaseEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="11" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hank_01/edu/dto/UserDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="62" column="45" lean-forward="true" selection-start-line="59" selection-start-column="8" selection-end-line="62" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hank_01/edu/Entity/UserEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hank_01/edu/dto/PlayerDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="25" column="30" lean-forward="true" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1104#1105#0" expanded="true" />
+            <element signature="e#1129#1130#0" expanded="true" />
+            <element signature="e#1163#1164#0" expanded="true" />
+            <element signature="e#1191#1192#0" expanded="true" />
+            <element signature="e#1226#1227#0" expanded="true" />
+            <element signature="e#1257#1258#0" expanded="true" />
+            <element signature="e#1305#1306#0" expanded="true" />
+            <element signature="e#1345#1346#0" expanded="true" />
+            <element signature="e#1382#1383#0" expanded="true" />
+            <element signature="e#1415#1416#0" expanded="true" />
+            <element signature="e#1467#1468#0" expanded="true" />
+            <element signature="e#1511#1512#0" expanded="true" />
+            <element signature="e#1546#1547#0" expanded="true" />
+            <element signature="e#1577#1578#0" expanded="true" />
+            <element signature="e#1625#1626#0" expanded="true" />
+            <element signature="e#1665#1666#0" expanded="true" />
+            <element signature="e#1695#1696#0" expanded="true" />
+            <element signature="e#1721#1722#0" expanded="true" />
+            <element signature="e#1759#1760#0" expanded="true" />
+            <element signature="e#1789#1790#0" expanded="true" />
+            <element signature="e#1830#1831#0" expanded="true" />
+            <element signature="e#1863#1864#0" expanded="true" />
+            <element signature="e#1919#1920#0" expanded="true" />
+            <element signature="e#1963#1964#0" expanded="true" />
+            <element signature="e#2008#2009#0" expanded="true" />
+            <element signature="e#2043#2044#0" expanded="true" />
+            <element signature="e#2105#2106#0" expanded="true" />
+            <element signature="e#2153#2154#0" expanded="true" />
+            <element signature="e#2188#2189#0" expanded="true" />
+            <element signature="e#2221#2222#0" expanded="true" />
+            <element signature="e#2271#2272#0" expanded="true" />
+            <element signature="e#2315#2316#0" expanded="true" />
+            <element signature="e#2349#2350#0" expanded="true" />
+            <element signature="e#2381#2382#0" expanded="true" />
+            <element signature="e#2429#2430#0" expanded="true" />
+            <element signature="e#2471#2472#0" expanded="true" />
+            <element signature="e#2510#2511#0" expanded="true" />
+            <element signature="e#2542#2543#0" expanded="true" />
+            <element signature="e#2595#2596#0" expanded="true" />
+            <element signature="e#2637#2638#0" expanded="true" />
+            <element signature="e#2677#2678#0" expanded="true" />
+            <element signature="e#2715#2716#0" expanded="true" />
+            <element signature="e#2775#2776#0" expanded="true" />
+            <element signature="e#2829#2830#0" expanded="true" />
+            <element signature="e#2870#2871#0" expanded="true" />
+            <element signature="e#2907#2908#0" expanded="true" />
+            <element signature="e#2967#2968#0" expanded="true" />
+            <element signature="e#3019#3020#0" expanded="true" />
+            <element signature="e#3054#3055#0" expanded="true" />
+            <element signature="e#3087#3088#0" expanded="true" />
+            <element signature="e#3137#3138#0" expanded="true" />
+            <element signature="e#3181#3182#0" expanded="true" />
+            <element signature="e#3216#3217#0" expanded="true" />
+            <element signature="e#3249#3250#0" expanded="true" />
+            <element signature="e#3299#3300#0" expanded="true" />
+            <element signature="e#3343#3344#0" expanded="true" />
+            <element signature="e#3378#3379#0" expanded="true" />
+            <element signature="e#3410#3411#0" expanded="true" />
+            <element signature="e#3457#3458#0" expanded="true" />
+            <element signature="e#3492#3493#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hank_01/edu/dao/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="12" column="12" lean-forward="false" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hank_01/edu/mapper/PlayerMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hank_01/edu/dao/PlayerDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="21" column="31" lean-forward="true" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hank_01/edu/dao/impl/PlayerDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#946#947#0" expanded="true" />
+            <element signature="e#973#974#0" expanded="true" />
+            <element signature="e#1068#1069#0" expanded="true" />
+            <element signature="e#1095#1096#0" expanded="true" />
+            <element signature="e#1189#1190#0" expanded="true" />
+            <element signature="e#1216#1217#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/hank_01/edu/playerTest/PlayerDaoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

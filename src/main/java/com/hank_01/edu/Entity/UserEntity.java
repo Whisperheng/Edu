@@ -1,6 +1,6 @@
 package com.hank_01.edu.Entity;
 
-import com.hank_01.edu.enums.UserStatusEnum;
+import com.hank_01.edu.enums.UserStatus;
 
 public class UserEntity extends BaseEntity {
     private String userName;
@@ -8,7 +8,7 @@ public class UserEntity extends BaseEntity {
     private String password;
     private String phone;
     private String sex;
-    private UserStatusEnum status;
+    private UserStatus status;
 
     public String getUserName() {
         return userName;
@@ -50,11 +50,11 @@ public class UserEntity extends BaseEntity {
         this.sex = sex;
     }
 
-    public UserStatusEnum getStatus() {
+    public UserStatus getStatus() {
         return status;
     }
 
-    public void setStatus(UserStatusEnum status) {
+    public void setStatus(UserStatus status) {
         this.status = status;
     }
 }

@@ -3,7 +3,7 @@ package com.hank_01.edu.dao.impl;
 import com.hank_01.edu.Entity.UserEntity;
 import com.hank_01.edu.common.util.StringUtil;
 import com.hank_01.edu.dao.UserDao;
-import com.hank_01.edu.enums.UserStatusEnum;
+import com.hank_01.edu.enums.UserStatus;
 import com.hank_01.edu.enums.errorEnum.UserErrorEnum;
 import com.hank_01.edu.exception.EduException;
 import com.hank_01.edu.mapper.UserMapper;
@@ -43,7 +43,7 @@ public class UserDaoImpl implements UserDao {
             throw new EduException(UserErrorEnum.USER_COUNT_ALREADY_EXISTED);
         }
         entity.setId(new Date().getTime());
-        entity.setStatus(UserStatusEnum.USE);
+        entity.setStatus(UserStatus.USE);
         return mapper.insertUser(entity);
     }
 
@@ -53,12 +53,12 @@ public class UserDaoImpl implements UserDao {
     }
 
     @Override
-    public Boolean updateStatusById(Long id, UserStatusEnum status) {
+    public Boolean updateStatusById(Long id, UserStatus status) {
         return null;
     }
 
     @Override
-    public List<UserEntity> findUsersByCondition(String nickName, UserStatusEnum status) {
+    public List<UserEntity> findUsersByCondition(String nickName, UserStatus status) {
         return null;
     }
 

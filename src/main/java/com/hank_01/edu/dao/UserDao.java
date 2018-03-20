@@ -1,7 +1,7 @@
 package com.hank_01.edu.dao;
 
 import com.hank_01.edu.Entity.UserEntity;
-import com.hank_01.edu.enums.UserStatusEnum;
+import com.hank_01.edu.enums.UserStatus;
 
 import java.util.List;
 
@@ -14,7 +14,7 @@ public interface UserDao {
 
     Boolean updateUser(UserEntity entity);
 
-    Boolean updateStatusById(Long id , UserStatusEnum status);
+    Boolean updateStatusById(Long id , UserStatus status);
 
-    public List<UserEntity> findUsersByCondition(String nickName, UserStatusEnum status);
+    public List<UserEntity> findUsersByCondition(String nickName, UserStatus status);
 }

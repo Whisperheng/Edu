@@ -1,5 +1,6 @@
 package com.hank_01.edu.userTest;
 
+import com.hank_01.edu.BaseTest;
 import com.hank_01.edu.Entity.UserEntity;
 import com.hank_01.edu.dao.UserDao;
 import org.junit.Test;

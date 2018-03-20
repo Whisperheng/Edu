@@ -1,4 +1,4 @@
-package com.hank_01.edu.userTest;
+package com.hank_01.edu;
 
 import com.hank_01.edu.EduApplication;
 import org.junit.runner.RunWith;

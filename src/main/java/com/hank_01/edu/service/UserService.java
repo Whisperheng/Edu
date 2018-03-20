@@ -1,7 +1,7 @@
 package com.hank_01.edu.service;
 
 import com.hank_01.edu.dto.UserDTO;
-import com.hank_01.edu.enums.UserStatusEnum;
+import com.hank_01.edu.enums.UserStatus;
 
 import java.util.List;
 
@@ -26,7 +26,7 @@ public interface UserService {
      * @param status
      * @return Boolean
      */
-    Boolean updateStatusById(Long id , UserStatusEnum status);
+    Boolean updateStatusById(Long id , UserStatus status);
 
     /**
      * 根据参数查找用户
@@ -42,7 +42,7 @@ public interface UserService {
      * @param status
      * @return List<UserDTO>
      */
-    List<UserDTO> findUsersByCondition(String nickName , UserStatusEnum status);
+    List<UserDTO> findUsersByCondition(String nickName , UserStatus status);
 
     /**
      *

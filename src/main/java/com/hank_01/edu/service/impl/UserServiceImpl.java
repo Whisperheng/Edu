@@ -4,7 +4,7 @@ import com.hank_01.edu.Entity.UserEntity;
 import com.hank_01.edu.common.util.StringUtil;
 import com.hank_01.edu.dao.UserDao;
 import com.hank_01.edu.dto.UserDTO;
-import com.hank_01.edu.enums.UserStatusEnum;
+import com.hank_01.edu.enums.UserStatus;
 import com.hank_01.edu.enums.errorEnum.UserErrorEnum;
 import com.hank_01.edu.exception.EduException;
 import com.hank_01.edu.service.UserService;
@@ -37,7 +37,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Boolean updateStatusById(Long id, UserStatusEnum status) {
+    public Boolean updateStatusById(Long id, UserStatus status) {
         return null;
     }
 
@@ -60,7 +60,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<UserDTO> findUsersByCondition(String nickName, UserStatusEnum status) {
+    public List<UserDTO> findUsersByCondition(String nickName, UserStatus status) {
         return null;
     }
 
