@@ -1,7 +1,6 @@
 package com.hank_01.edu.controller;
 
 import com.hank_01.edu.common.response.EduResponse;
-import com.hank_01.edu.common.util.StringUtil;
 import com.hank_01.edu.dto.UserDTO;
 import com.hank_01.edu.request.UserRequest;
 import com.hank_01.edu.service.UserService;
