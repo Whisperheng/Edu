@@ -2,7 +2,7 @@ package com.hank_01.edu.enums;
 
 import org.apache.commons.lang3.StringUtils;
 
-public enum AgentType {
+public enum AgentLever {
     LEVER_SUPER(0,"LEVER_SUPER","商家账户，总代理"),
     LEVER_1(1,"LEVER_1","一级代理"),
     LEVER_2(2,"LEVER_2","二级代理"),
@@ -13,17 +13,17 @@ public enum AgentType {
     private String name;
     private String desc;
 
-    AgentType(int code, String name, String desc) {
+    AgentLever(int code, String name, String desc) {
         this.code = code;
         this.name = name;
         this.desc = desc;
     }
 
-    public static AgentType findByName(String name){
+    public static AgentLever findByName(String name){
         if (StringUtils.isBlank(name)) {
             return null;
         }
-        for (AgentType current : values()) {
+        for (AgentLever current : values()) {
             if (StringUtils.equals(current.name(), name)) {
                 return current;
             }

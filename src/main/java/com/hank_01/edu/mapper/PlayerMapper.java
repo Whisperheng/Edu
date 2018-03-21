@@ -1,6 +1,7 @@
 package com.hank_01.edu.mapper;
 
 import com.hank_01.edu.Entity.PlayerEntity;
+import com.hank_01.edu.enums.AgentLever;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
@@ -40,4 +41,13 @@ public interface PlayerMapper {
             " </script> "
     )
     Boolean updatePlayer(@Param("entity") PlayerEntity entity);
+
+    @Update("<script>"+
+            " UPDATE player set update_time = NOW() "+
+            " <if test = 'agentLever != null '> , agent_lever = #{agentLever} </if>"+
+            " where id = #{id}"+
+            "</script>"
+    )
+    Boolean updatePlayerAgentTypeById(@Param("id") Long id,
+                                      @Param("agentLever")AgentLever agentLever);
 }

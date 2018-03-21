@@ -1,7 +1,7 @@
 package com.hank_01.edu.dao;
 
 import com.hank_01.edu.Entity.PlayerEntity;
-import com.hank_01.edu.enums.AgentType;
+import com.hank_01.edu.enums.AgentLever;
 import com.hank_01.edu.enums.OnLineStatus;
 import com.hank_01.edu.enums.PlayStatus;
 
@@ -17,12 +17,12 @@ public interface PlayerDao {
 
     /**
      * 根据条件查询玩家列表
-     * @param agentType 代理等级
+     * @param agentLever 代理等级
      * @param onLineStatus 在线状态
      * @param playStatus 玩家账户状态
      * @return List<PlayerEntity>
      */
-    List<PlayerEntity> findPlayersByCondition(AgentType agentType ,
+    List<PlayerEntity> findPlayersByCondition(AgentLever agentLever,
                                               OnLineStatus onLineStatus ,
                                               PlayStatus playStatus);
 
@@ -36,10 +36,10 @@ public interface PlayerDao {
     /**
      * 根据ID改变玩家代理等级
      * @param id 玩家id
-     * @param newAgentType 新的代理等级
+     * @param newAgentLever 新的代理等级
      * @return Boolean
      */
-    Boolean updatePlayerAgentTypeById(Long id, AgentType newAgentType);
+    Boolean updatePlayerAgentTypeById(Long id, AgentLever newAgentLever);
     /**
      * 根据ID改变玩家玩家状态
      * @param id 玩家id

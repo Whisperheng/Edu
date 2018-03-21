@@ -2,7 +2,7 @@ package com.hank_01.edu.dto;
 
 import com.hank_01.edu.Entity.PlayerEntity;
 import com.hank_01.edu.common.util.BeanUtil;
-import com.hank_01.edu.enums.AgentType;
+import com.hank_01.edu.enums.AgentLever;
 import com.hank_01.edu.enums.OnLineStatus;
 import com.hank_01.edu.enums.PlayStatus;
 
@@ -14,11 +14,11 @@ public class PlayerDTO {
     private String weChatName;
     private String nickName;
     private String sex;
-    private PlayStatus playStatus;
+    private PlayStatus status;
     private OnLineStatus onLineStatus;
     private Long moneyCount;
     private Long goldCount;
-    private AgentType agentType;
+    private AgentLever agentLever;
     private Long superLeverCount;
     private String superLeverName;
     private Date createTime;
@@ -78,12 +78,12 @@ public class PlayerDTO {
         this.sex = sex;
     }
 
-    public PlayStatus getPlayStatus() {
-        return playStatus;
+    public PlayStatus getStatus() {
+        return status;
     }
 
-    public void setPlayStatus(PlayStatus playStatus) {
-        this.playStatus = playStatus;
+    public void setStatus(PlayStatus status) {
+        this.status = status;
     }
 
     public OnLineStatus getOnLineStatus() {
@@ -110,12 +110,12 @@ public class PlayerDTO {
         this.goldCount = goldCount;
     }
 
-    public AgentType getAgentType() {
-        return agentType;
+    public AgentLever getAgentLever() {
+        return agentLever;
     }
 
-    public void setAgentType(AgentType agentType) {
-        this.agentType = agentType;
+    public void setAgentLever(AgentLever agentLever) {
+        this.agentLever = agentLever;
     }
 
     public Long getSuperLeverCount() {

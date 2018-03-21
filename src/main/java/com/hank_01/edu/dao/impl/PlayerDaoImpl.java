@@ -2,9 +2,11 @@ package com.hank_01.edu.dao.impl;
 
 import com.hank_01.edu.Entity.PlayerEntity;
 import com.hank_01.edu.dao.PlayerDao;
-import com.hank_01.edu.enums.AgentType;
+import com.hank_01.edu.enums.AgentLever;
 import com.hank_01.edu.enums.OnLineStatus;
 import com.hank_01.edu.enums.PlayStatus;
+import com.hank_01.edu.enums.errorEnum.PlayerError;
+import com.hank_01.edu.exception.EduException;
 import com.hank_01.edu.mapper.PlayerMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -28,12 +30,12 @@ public class PlayerDaoImpl implements PlayerDao {
     }
 
     @Override
-    public List<PlayerEntity> findPlayersByCondition(AgentType agentType, OnLineStatus onLineStatus, PlayStatus playStatus) {
+    public List<PlayerEntity> findPlayersByCondition(AgentLever agentLever, OnLineStatus onLineStatus, PlayStatus playStatus) {
         String agentTypeName = null;
         String onLineStatusName = null;
         String playerStatusName = null;
-        if (agentType != null){
-            agentTypeName = agentType.getName();
+        if (agentLever != null){
+            agentTypeName = agentLever.getName();
         }
         if (onLineStatus != null){
             onLineStatusName = onLineStatus.getName();
@@ -54,8 +56,19 @@ public class PlayerDaoImpl implements PlayerDao {
     }
 
     @Override
-    public Boolean updatePlayerAgentTypeById(Long id, AgentType newAgentType) {
-        return null;
+    public Boolean updatePlayerAgentTypeById(Long id, AgentLever newAgentLever) {
+        if (id == null || newAgentLever == null ){
+            LOG.info("玩家代理等级更新失败，新代理等级为空或ID为空");
+            return false;
+        }
+        PlayerEntity entity = this.findPlayerById(id);
+        if (entity ==null){
+            throw new EduException(PlayerError.PLAYER_DOES_NOT_EXISTED);
+        }
+        if (entity.getAgentLever() != AgentLever.LEVER_NULL){
+            throw new EduException(PlayerError.CAN_NOT_CHANGE_AGENT_LEVER);
+        }
+        return playerMapper.updatePlayerAgentTypeById(id, newAgentLever);
     }
 
     @Override

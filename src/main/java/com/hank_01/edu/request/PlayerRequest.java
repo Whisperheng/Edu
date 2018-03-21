@@ -1,6 +1,6 @@
 package com.hank_01.edu.request;
 
-import com.hank_01.edu.enums.AgentType;
+import com.hank_01.edu.enums.AgentLever;
 import com.hank_01.edu.enums.OnLineStatus;
 import com.hank_01.edu.enums.PlayStatus;
 
@@ -16,7 +16,7 @@ public class PlayerRequest {
     private OnLineStatus onLineStatus;
     private Long moneyCount;
     private Long goldCount;
-    private AgentType agentType;
+    private AgentLever agentLever;
     private Long superLeverCount;
     private String superLeverName;
     private Date createTime;
@@ -95,12 +95,12 @@ public class PlayerRequest {
         this.goldCount = goldCount;
     }
 
-    public AgentType getAgentType() {
-        return agentType;
+    public AgentLever getAgentLever() {
+        return agentLever;
     }
 
-    public void setAgentType(AgentType agentType) {
-        this.agentType = agentType;
+    public void setAgentLever(AgentLever agentLever) {
+        this.agentLever = agentLever;
     }
 
     public Long getSuperLeverCount() {

@@ -13,7 +13,7 @@ public class PlayerDaoTest extends BaseTest{
     @Test
     public void findByIdTest(){
         PlayerEntity entity = dao.findPlayerById(1L);
-        System.out.print(entity.getAgentType().getName());
+        System.out.print(entity.getAgentLever().getName());
 
     }
 }
