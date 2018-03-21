@@ -6,12 +6,17 @@ import com.hank_01.edu.enums.AgentType;
 import com.hank_01.edu.enums.OnLineStatus;
 import com.hank_01.edu.enums.PlayStatus;
 import com.hank_01.edu.mapper.PlayerMapper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 @Repository
 public class PlayerDaoImpl implements PlayerDao {
+
+    private static final Logger LOG = LoggerFactory.getLogger(PlayerDaoImpl.class);
+
     @Autowired
     private PlayerMapper playerMapper;
     @Override
@@ -41,7 +46,11 @@ public class PlayerDaoImpl implements PlayerDao {
 
     @Override
     public Boolean updatePlayer(PlayerEntity entity) {
-        return null;
+        if (entity == null || entity.getId() == null){
+            LOG.info("玩家信息更新失败，参数为空或ID为空");
+            return false;
+        }
+        return playerMapper.updatePlayer(entity);
     }
 
     @Override

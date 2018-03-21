@@ -48,7 +48,10 @@ public class PlayerServiceImpl implements PlayerService {
 
     @Override
     public Boolean updatePlayer(PlayerDTO dto) {
-        return null;
+        if (dto == null || dto.getId() == null){
+            return false;
+        }
+        return playerDao.updatePlayer(dto.convert2Entity());
     }
 
     @Override
