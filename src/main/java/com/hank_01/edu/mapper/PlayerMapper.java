@@ -2,10 +2,7 @@ package com.hank_01.edu.mapper;
 
 import com.hank_01.edu.Entity.PlayerEntity;
 import com.hank_01.edu.enums.AgentLever;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.Update;
+import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
@@ -50,4 +47,28 @@ public interface PlayerMapper {
     )
     Boolean updatePlayerAgentTypeById(@Param("id") Long id,
                                       @Param("agentLever")AgentLever agentLever);
+
+    @Insert("<script>"+
+            " INSERT INTO player ("+
+            " id , we_chat_id , we_chat_name , nick_name  " +
+            " , status , online_status , agent_lever "+
+            " , is_deleted , create_time , update_time " +
+            " <if test='entity.sex != null'> , sex </if>" +
+            " <if test='entity.moneyCount != null'> , money_count </if>" +
+            " <if test='entity.goldCount != null'> , gold_count </if>" +
+            " <if test='entity.superLeverCount != null'> , super_lever_count </if>" +
+            " <if test='entity.superLeverName != null'> , super_lever_name </if>" +
+            " ) VALUES(" +
+            " #{entity.id} , #{entity.weChatId} ,#{entity.weChatName} , #{entity.nickName} " +
+            " , 'USE' , 'ONLINE' , 'LEVER_NULL' "+
+            " , 0 , now() , now() " +
+            " <if test='entity.sex != null'> , #{entity.sex} </if>" +
+            " <if test='entity.moneyCount != null'> , #{entity.moneyCount} </if>" +
+            " <if test='entity.goldCount != null'> , #{entity.goldCount} </if>" +
+            " <if test='entity.superLeverCount != null'> , #{entity.superLeverCount} </if>" +
+            " <if test='entity.superLeverName != null'> , #{entity.superLeverName} </if>" +
+            ")"+
+            " </script>"
+    )
+    Boolean insertPlayer(@Param("entity")PlayerEntity entity);
 }

@@ -8,6 +8,14 @@ import com.hank_01.edu.enums.PlayStatus;
 import java.util.List;
 
 public interface PlayerDao {
+
+    /**
+     * 创建新的玩家账号
+     * @param entity
+     * @return
+     */
+    Boolean createPlayer(PlayerEntity entity);
+
     /**
      * 根据ID查找指定玩家信息
      * @param id

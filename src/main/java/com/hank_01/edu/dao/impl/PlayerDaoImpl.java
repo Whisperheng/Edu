@@ -13,6 +13,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import java.util.Date;
 import java.util.List;
 @Repository
 public class PlayerDaoImpl implements PlayerDao {
@@ -21,6 +22,17 @@ public class PlayerDaoImpl implements PlayerDao {
 
     @Autowired
     private PlayerMapper playerMapper;
+
+    @Override
+    public Boolean createPlayer(PlayerEntity entity) {
+        if (entity == null || entity.getWeChatId() == null
+                           || entity.getNickName() ==null){
+            throw new EduException(PlayerError.PARAMETER_IS_NOT_ENOUGH);
+        }
+        entity.setId(new Date().getTime());
+        return playerMapper.insertPlayer(entity);
+    }
+
     @Override
     public PlayerEntity findPlayerById(Long id) {
         if (id == null){

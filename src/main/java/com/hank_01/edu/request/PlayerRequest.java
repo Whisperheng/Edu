@@ -23,6 +23,9 @@ public class PlayerRequest {
     private Date updateTime;
     private Boolean isDeleted;
 
+    /******* 扩展字段 *************/
+
+    private Long superCountId;
     public Long getId() {
         return id;
     }

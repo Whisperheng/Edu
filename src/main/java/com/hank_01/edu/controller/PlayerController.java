@@ -8,17 +8,22 @@ import com.hank_01.edu.enums.OnLineStatus;
 import com.hank_01.edu.enums.PlayStatus;
 import com.hank_01.edu.request.PlayerRequest;
 import com.hank_01.edu.service.PlayerService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(value = "/player" )
+@Api(description = "player")
 public class PlayerController {
 
     @Autowired
     private PlayerService  playerService;
+    @ApiOperation(value = "sahsbhaschajcjk",notes = "sadcdsdcva")
     @RequestMapping(value = "/{id}" ,method = RequestMethod.GET)
-    public EduResponse findPlayerById(@PathVariable(value = "id") Long id){
+    public EduResponse findPlayerById(@ApiParam(value = "woashajsca")@PathVariable(value = "id") Long id){
         return EduResponse.succResponse(playerService.findPlayerById(id));
     }
 
@@ -39,6 +44,11 @@ public class PlayerController {
     public EduResponse updatePlayerAgentLeverById(@RequestParam(value = "id")Long id,
                                                   @RequestParam(value = "newAgentLever",required = false)AgentLever newAgentLever){
         return EduResponse.succResponse(playerService.updatePlayerAgentTypeById(id,newAgentLever));
+    }
+
+    @RequestMapping(value = "",method = RequestMethod.POST)
+    public EduResponse createPlayer(@RequestBody PlayerRequest request){
+        return EduResponse.succResponse(playerService.createPlayer(this.convertRequest2DTO(request)));
     }
 
     private PlayerDTO convertRequest2DTO(PlayerRequest request){

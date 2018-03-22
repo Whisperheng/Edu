@@ -10,12 +10,11 @@ import java.util.List;
 public interface PlayerService {
     /**
      * 创建游戏玩家账号 ： 1，无代理推荐玩家  默认非代理 无上级代理
-     *                  2，代理推荐玩家  有上级代理
+     *                  2，代理推荐玩家  检查上级代理是否存在 存入上级代理昵称
      * @param dto
-     * @param superLeverCount
      * @return
      */
-    Boolean createPlayerByCondition(PlayerDTO dto, Long superLeverCount);
+    Boolean createPlayer(PlayerDTO dto);
 
     /**
      * 根据ID查找指定玩家信息
@@ -44,6 +43,8 @@ public interface PlayerService {
 
     /**
      * 根据ID改变玩家代理等级
+     * 仅普通玩家可以更改，普通无上级代理玩家可申请成为商家之外的其他代理
+     *                      有上级玩家需根据自己上级代理等级
      * @param id 玩家id
      * @param newAgentLever 新的代理等级
      * @return Boolean

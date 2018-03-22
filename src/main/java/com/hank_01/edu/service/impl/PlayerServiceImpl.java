@@ -26,8 +26,17 @@ public class PlayerServiceImpl implements PlayerService {
     private PlayerDao  playerDao;
 
     @Override
-    public Boolean createPlayerByCondition(PlayerDTO dto, Long superLeverCount) {
-        return null;
+    public Boolean createPlayer(PlayerDTO dto) {
+
+        if (dto.getSuperLeverCount() != null){
+            PlayerDTO  superLever = this.findPlayerById(dto.getSuperLeverCount());
+            if (superLever == null){
+                throw new EduException(PlayerError.SUPER_LEVER_COUNT_IS_INVALID);
+            }
+            dto.setSuperLeverName(superLever.getNickName());
+        }
+
+        return playerDao.createPlayer(dto.convert2Entity());
     }
 
     @Override
@@ -73,6 +82,10 @@ public class PlayerServiceImpl implements PlayerService {
             LOG.info("更改代理等级失败 ：参数错误，更新玩家代理状态时ID为空 。");
             return false;
         }
+        if (AgentLever.LEVER_SUPER == newAgentLever ){
+            LOG.info("更改代理等级失败 ：未经许可，不能成为商家代理 ");
+            return false;
+        }
         PlayerDTO playerDTO = this.findPlayerById(id);
         if (playerDTO == null){
             throw new EduException(PlayerError.PLAYER_DOES_NOT_EXISTED);
@@ -80,7 +93,7 @@ public class PlayerServiceImpl implements PlayerService {
         if (playerDTO.getAgentLever() != AgentLever.LEVER_NULL){
             throw new EduException(PlayerError.CAN_NOT_CHANGE_AGENT_LEVER);
         }
-        if (newAgentLever == null){
+        if (playerDTO.getSuperLeverCount() != null){
             newAgentLever = this.getRightAgentLever(playerDTO.getAgentLever());
         }
         return playerDao.updatePlayerAgentTypeById(id, newAgentLever);
@@ -89,7 +102,7 @@ public class PlayerServiceImpl implements PlayerService {
     /**
      * 根据自己的上级代理来确定自己的可申请的代理 级别
      * @param superAgentLever
-     * @return
+     * @return AgentLever
      */
     private AgentLever getRightAgentLever(AgentLever superAgentLever){
         if (superAgentLever == null){
