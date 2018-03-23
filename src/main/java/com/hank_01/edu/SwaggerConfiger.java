@@ -19,15 +19,15 @@ public class SwaggerConfiger {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.seawater.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.hank_01.edu"))
                 .paths(PathSelectors.any())
                 .build();
     }
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("Spring Boot中使用Swagger2构建RESTful APIs")
-                .description("Spring Boot Swagger2")
+                .title("hank edu 开发文档")
+                .description("")
                 .termsOfServiceUrl("http://blog.csdn.net/zhouseawater")
                 .contact("seawater")
                 .version("1.0")

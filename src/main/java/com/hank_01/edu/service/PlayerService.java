@@ -12,7 +12,7 @@ public interface PlayerService {
      * 创建游戏玩家账号 ： 1，无代理推荐玩家  默认非代理 无上级代理
      *                  2，代理推荐玩家  检查上级代理是否存在 存入上级代理昵称
      * @param dto
-     * @return
+     * @return Boolean
      */
     Boolean createPlayer(PlayerDTO dto);
 
