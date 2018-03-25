@@ -11,15 +11,15 @@ public interface PlayerService {
     /**
      * 创建游戏玩家账号 ： 1，无代理推荐玩家  默认非代理 无上级代理
      *                  2，代理推荐玩家  检查上级代理是否存在 存入上级代理昵称
-     * @param dto
-     * @return Boolean
+     * @param dto 玩家信息DTO
+     * @return Boolean 创建结果
      */
     Boolean createPlayer(PlayerDTO dto);
 
     /**
      * 根据ID查找指定玩家信息
-     * @param id
-     * @return PlayerDTO
+     * @param id 玩家id
+     * @return PlayerDTO 玩家信息DTO
      */
     PlayerDTO findPlayerById(Long id );
 
@@ -28,7 +28,7 @@ public interface PlayerService {
      * @param agentLever 代理等级
      * @param onLineStatus 在线状态
      * @param playStatus 玩家账户状态
-     * @return List<PlayerDTO>
+     * @return List<PlayerDTO> 玩家列表
      */
     List<PlayerDTO> findPlayersByCondition(AgentLever agentLever,
                                            OnLineStatus onLineStatus ,
@@ -36,8 +36,8 @@ public interface PlayerService {
 
     /**
      * 更改玩家信息，代理信息 状态信息除外
-     * @param dto
-     * @return boolean
+     * @param dto 玩家要更新成的信息
+     * @return boolean 更新结果
      */
     Boolean updatePlayer(PlayerDTO dto);
 
@@ -47,7 +47,7 @@ public interface PlayerService {
      *                      有上级玩家需根据自己上级代理等级
      * @param id 玩家id
      * @param newAgentLever 新的代理等级
-     * @return Boolean
+     * @return Boolean 更新结果
      */
     Boolean updatePlayerAgentTypeById(Long id, AgentLever newAgentLever);
 
@@ -55,14 +55,14 @@ public interface PlayerService {
      * 根据ID改变玩家玩家状态
      * @param id 玩家id
      * @param newPlayStatus 新的玩家状态
-     * @return Boolean
+     * @return Boolean 更新结果
      */
     Boolean updatePlayerStatusById(Long id ,PlayStatus newPlayStatus);
 
     /**
      * 查询可申请的代理等级列表
-     * @param id
-     * @return List<AgentLever>
+     * @param id 玩家id
+     * @return List<AgentLever> 可申请的代理列表
      */
     List<AgentLever> findAvailableAgent(Long id);
 
