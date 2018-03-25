@@ -12,11 +12,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.Date;
+import java.util.List;
 
 @Repository
-public class OrderDapImpl implements OrderDao {
+public class OrderDaoImpl implements OrderDao {
 
-    private static final Logger LOG = LoggerFactory.getLogger(OrderDapImpl.class);
+    private static final Logger LOG = LoggerFactory.getLogger(OrderDaoImpl.class);
 
     @Autowired
     private OrderMapper orderMapper;
@@ -54,5 +55,10 @@ public class OrderDapImpl implements OrderDao {
             throw new EduException(OrderError.ORDER_NOT_EXISTED);
         }
         return orderMapper.updateOrderStatusById(id, status);
+    }
+
+    @Override
+    public List<OrderEntity> findOrdersByCondition(Long id ,OrderStatus status, Long playerId) {
+        return orderMapper.findOrdersByCondition(id,status,playerId);
     }
 }

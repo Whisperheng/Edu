@@ -1,6 +1,7 @@
 package com.hank_01.edu.service.impl;
 
 import com.hank_01.edu.Entity.OrderEntity;
+import com.hank_01.edu.common.util.CollectionUtil;
 import com.hank_01.edu.dao.OrderDao;
 import com.hank_01.edu.dto.OrderDTO;
 import com.hank_01.edu.dto.PlayerDTO;
@@ -16,6 +17,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -142,11 +144,30 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public OrderDTO findOrderById(Long id) {
-        return null;
+        if (id == null){
+            return null;
+        }
+        OrderEntity entity = orderDao.findOrderById(id);
+        if (entity == null){
+            return null;
+        }
+        OrderDTO orderDTO = new OrderDTO();
+        orderDTO.convertFromEntity(entity);
+        return orderDTO;
     }
 
     @Override
     public List<OrderDTO> findOrdersByCondition(Long id, Long playerId, OrderStatus status) {
-        return null;
+        List<OrderEntity> orderEntities = orderDao.findOrdersByCondition(id,status,playerId);
+        if (CollectionUtil.isEmpty(orderEntities)){
+            return null;
+        }
+        List<OrderDTO> orderDTOList = new ArrayList<>();
+        for (OrderEntity entity : orderEntities){
+            OrderDTO orderDTO = new OrderDTO();
+            orderDTO.convertFromEntity(entity);
+            orderDTOList.add(orderDTO);
+        }
+        return orderDTOList;
     }
 }
