@@ -4,6 +4,8 @@ import com.hank_01.edu.enums.AgentLever;
 import com.hank_01.edu.enums.OnLineStatus;
 import com.hank_01.edu.enums.PlayStatus;
 
+import java.math.BigDecimal;
+
 public class PlayerEntity extends BaseEntity{
     private String weChatId;
     private String weChatName;
@@ -11,11 +13,12 @@ public class PlayerEntity extends BaseEntity{
     private String sex;
     private PlayStatus status;
     private OnLineStatus onLineStatus;
-    private Long moneyCount;
-    private Long goldCount;
+    private BigDecimal moneyCount;
+    private BigDecimal goldCount;
     private AgentLever agentLever;
     private Long superLeverCount;
     private String superLeverName;
+    private AgentLever superAgentLever;
 
     public String getWeChatId() {
         return weChatId;
@@ -65,19 +68,19 @@ public class PlayerEntity extends BaseEntity{
         this.onLineStatus = onLineStatus;
     }
 
-    public Long getMoneyCount() {
+    public BigDecimal getMoneyCount() {
         return moneyCount;
     }
 
-    public void setMoneyCount(Long moneyCount) {
+    public void setMoneyCount(BigDecimal moneyCount) {
         this.moneyCount = moneyCount;
     }
 
-    public Long getGoldCount() {
+    public BigDecimal getGoldCount() {
         return goldCount;
     }
 
-    public void setGoldCount(Long goldCount) {
+    public void setGoldCount(BigDecimal goldCount) {
         this.goldCount = goldCount;
     }
 
@@ -103,5 +106,13 @@ public class PlayerEntity extends BaseEntity{
 
     public void setSuperLeverName(String superLeverName) {
         this.superLeverName = superLeverName;
+    }
+
+    public AgentLever getSuperAgentLever() {
+        return superAgentLever;
+    }
+
+    public void setSuperAgentLever(AgentLever superAgentLever) {
+        this.superAgentLever = superAgentLever;
     }
 }

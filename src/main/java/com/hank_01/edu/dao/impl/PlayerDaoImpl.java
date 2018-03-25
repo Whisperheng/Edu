@@ -68,7 +68,7 @@ public class PlayerDaoImpl implements PlayerDao {
     }
 
     @Override
-    public Boolean updatePlayerAgentTypeById(Long id, AgentLever newAgentLever) {
+    public Boolean updatePlayerAgentTypeById(Long id, AgentLever newAgentLever ,Long superLeverCount ,String superLeverName ,AgentLever superAgentLever) {
         if (id == null || newAgentLever == null ){
             LOG.info("玩家代理等级更新失败，新代理等级为空或ID为空");
             return false;
@@ -80,7 +80,7 @@ public class PlayerDaoImpl implements PlayerDao {
         if (entity.getAgentLever() != AgentLever.LEVER_NULL){
             throw new EduException(PlayerError.CAN_NOT_CHANGE_AGENT_LEVER);
         }
-        return playerMapper.updatePlayerAgentTypeById(id, newAgentLever);
+        return playerMapper.updatePlayerAgentTypeById(id, newAgentLever ,superLeverCount,superLeverName,superAgentLever);
     }
 
     @Override

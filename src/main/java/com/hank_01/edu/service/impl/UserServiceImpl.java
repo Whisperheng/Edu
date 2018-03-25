@@ -53,9 +53,7 @@ public class UserServiceImpl implements UserService {
         }
         UserDTO userDTO = new UserDTO();
         userDTO.convertfrom(entity);
-        LOG.info("已找到。。。。。。。。。");
-        LOG.error("error...............");
-        LOG.debug("debug>..............");
+        LOG.info("已找到用户。。。。。。。。。");
         return userDTO;
     }
 
@@ -73,7 +71,7 @@ public class UserServiceImpl implements UserService {
         return dto.getPassword().equals(password);
     }
 
-    public void validate(UserDTO dto){
+    private void validate(UserDTO dto){
         if (StringUtil.isEmpty(dto.getUserName()) || StringUtil.isEmpty(dto.getPassword())){
             throw new EduException(UserErrorEnum.PARAMETER_ERROR);
         }

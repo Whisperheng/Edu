@@ -42,12 +42,15 @@ public interface PlayerDao {
     Boolean updatePlayer(PlayerEntity entity);
 
     /**
-     * 根据ID改变玩家代理等级
-     * @param id 玩家id
-     * @param newAgentLever 新的代理等级
-     * @return Boolean
+     * 改变玩家代理等级相关信息
+     * @param id
+     * @param newAgentLever
+     * @param superLeverCount
+     * @param superLeverName
+     * @param superAgentLever
+     * @return boolean
      */
-    Boolean updatePlayerAgentTypeById(Long id, AgentLever newAgentLever);
+    Boolean updatePlayerAgentTypeById(Long id, AgentLever newAgentLever,Long superLeverCount ,String superLeverName,AgentLever superAgentLever );
     /**
      * 根据ID改变玩家玩家状态
      * @param id 玩家id

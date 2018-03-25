@@ -23,17 +23,18 @@ public class PlayerServiceImpl implements PlayerService {
     private static final Logger LOG = LoggerFactory.getLogger(PlayerServiceImpl.class);
 
     @Autowired
-    private PlayerDao  playerDao;
+    private PlayerDao playerDao;
 
     @Override
     public Boolean createPlayer(PlayerDTO dto) {
 
         if (dto.getSuperLeverCount() != null){
-            PlayerDTO  superLever = this.findPlayerById(dto.getSuperLeverCount());
+            PlayerDTO superLever = this.findPlayerById(dto.getSuperLeverCount());
             if (superLever == null){
                 throw new EduException(PlayerError.SUPER_LEVER_COUNT_IS_INVALID);
             }
             dto.setSuperLeverName(superLever.getNickName());
+            dto.setSuperAgentLever(superLever.getAgentLever());
         }
 
         return playerDao.createPlayer(dto.convert2Entity());
@@ -96,7 +97,28 @@ public class PlayerServiceImpl implements PlayerService {
         if (playerDTO.getSuperLeverCount() != null){
             newAgentLever = this.getRightAgentLever(playerDTO.getAgentLever());
         }
-        return playerDao.updatePlayerAgentTypeById(id, newAgentLever);
+
+        Boolean qualificationResult = this.agentQualification(id,newAgentLever);
+        if (! qualificationResult){
+            throw new EduException(PlayerError.QUALIFICATION_AGENT_FAIL);
+        }
+
+        Long superLeverCount = this.getRightSuperCount(newAgentLever);
+        PlayerDTO superAgent = this.findPlayerById(superLeverCount);
+        return playerDao.updatePlayerAgentTypeById(id, newAgentLever ,superLeverCount ,superAgent.getNickName(),superAgent.getAgentLever());
+    }
+
+    private Long getRightSuperCount(AgentLever selfAgentLever){
+        switch (selfAgentLever){
+            case LEVER_1:
+                return 1L;
+            case LEVER_2:
+                return 2L;
+            case LEVER_3:
+                return 3L;
+            default:
+                return null;
+        }
     }
 
     /**
@@ -127,5 +149,68 @@ public class PlayerServiceImpl implements PlayerService {
     @Override
     public Boolean updatePlayerStatusById(Long id, PlayStatus newPlayStatus) {
         return null;
+    }
+
+    @Override
+    public List<AgentLever> findAvailableAgent(Long id) {
+
+        if (id == null){
+           throw new EduException(PlayerError.PARAMETER_ERROR);
+        }
+
+        List<AgentLever> agentLeverList = new ArrayList<>();
+        PlayerDTO dto = this.findPlayerById(id);
+        if (dto == null){
+           throw new EduException(PlayerError.PLAYER_DOES_NOT_EXISTED);
+        }
+        if (dto.getSuperLeverCount() == null){
+            agentLeverList.add(AgentLever.LEVER_1);
+            agentLeverList.add(AgentLever.LEVER_2);
+            agentLeverList.add(AgentLever.LEVER_3);
+            return agentLeverList;
+        }
+        PlayerDTO superPlayer = this.findPlayerById(id);
+        if (superPlayer == null ){
+            agentLeverList.add(AgentLever.LEVER_1);
+            agentLeverList.add(AgentLever.LEVER_2);
+            agentLeverList.add(AgentLever.LEVER_3);
+            LOG.debug("玩家上级账户不存在，将玩家上级设为空");
+            return agentLeverList;
+        }
+        AgentLever agentLever = this.getRightAgentLever(superPlayer.getAgentLever());
+        agentLeverList.add(agentLever);
+        return agentLeverList;
+
+    }
+
+    /**
+     * 验证是否具有成为所申请代理的资格
+     * 一级代理 ：700 金币 ， 二级代理 ： 500金币 ， 三级代理 ： 300金币
+     * @param id
+     * @param newAgentLever
+     * @return Boolean
+     */
+    private Boolean agentQualification(Long id, AgentLever newAgentLever) {
+        if (id == null  || newAgentLever == null){
+            return false;
+        }
+        if (AgentLever.LEVER_SUPER == newAgentLever ){
+            LOG.info("更改代理等级失败 ：未经许可，不能成为商家代理 ");
+            return false;
+        }
+        PlayerDTO playerDTO = this.findPlayerById(id);
+        if (playerDTO == null){
+            throw new EduException(PlayerError.PLAYER_DOES_NOT_EXISTED);
+        }
+        switch (newAgentLever){
+            case LEVER_1:
+                return playerDTO.getGoldCount().intValue() >= 700;
+            case LEVER_2:
+                return playerDTO.getGoldCount().intValue() >= 500;
+            case LEVER_3:
+                return playerDTO.getGoldCount().intValue() >= 300;
+            default:
+                return false;
+        }
     }
 }

@@ -58,4 +58,12 @@ public interface PlayerService {
      * @return Boolean
      */
     Boolean updatePlayerStatusById(Long id ,PlayStatus newPlayStatus);
+
+    /**
+     * 查询可申请的代理等级列表
+     * @param id
+     * @return List<AgentLever>
+     */
+    List<AgentLever> findAvailableAgent(Long id);
+
 }

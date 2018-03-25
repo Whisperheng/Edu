@@ -14,6 +14,8 @@ import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.math.BigDecimal;
+
 @RestController
 @CrossOrigin
 @RequestMapping(value = "/player" )
@@ -22,11 +24,15 @@ public class PlayerController {
 
     @Autowired
     private PlayerService  playerService;
+
+
     @ApiOperation(value = "查找玩家",notes = "查找玩家")
     @RequestMapping(value = "/{id}" ,method = RequestMethod.GET)
     public EduResponse findPlayerById(@ApiParam(value = "玩家id")@PathVariable(value = "id") Long id){
         return EduResponse.succResponse(playerService.findPlayerById(id));
     }
+
+
     @ApiOperation(value = "查找玩家列表",notes = "查找玩家列表")
     @RequestMapping(value = "/players" ,method = RequestMethod.GET)
     public EduResponse findPlayersByCondition(@ApiParam(value = "代理等级")@RequestParam(value = "agentLever",required = false)AgentLever agentLever,
@@ -35,26 +41,53 @@ public class PlayerController {
 
         return EduResponse.succResponse(playerService.findPlayersByCondition(agentLever,onLineStatus,playStatus));
     }
+
+
     @ApiOperation(value = "更新玩家信息",notes = "更新玩家信息")
     @RequestMapping(value = "",method = RequestMethod.PUT)
     public EduResponse updatePlayer(@ApiParam(value = "更新请求")@RequestBody PlayerRequest request){
         return EduResponse.succResponse(playerService.updatePlayer(this.convertRequest2DTO(request)));
     }
+
+
     @ApiOperation(value = "更新玩家代理等级",notes = "更新玩家代理等级")
     @RequestMapping(value = "/agent" ,method = RequestMethod.PUT)
     public EduResponse updatePlayerAgentLeverById(@ApiParam(value = "玩家ID")@RequestParam(value = "id")Long id,
                                                   @ApiParam(value = "代理等级")@RequestParam(value = "agentLever",required = false)AgentLever agentLever){
         return EduResponse.succResponse(playerService.updatePlayerAgentTypeById(id,agentLever));
     }
+
+
     @ApiOperation(value = "新建玩家",notes = "新建玩家")
     @RequestMapping(value = "",method = RequestMethod.POST)
     public EduResponse createPlayer(@RequestBody PlayerRequest request){
         return EduResponse.succResponse(playerService.createPlayer(this.convertRequest2DTO(request)));
     }
 
+    @ApiOperation(value = "查找玩家可申请代理列表",notes = "查找玩家可申请代理列表")
+    @RequestMapping(value = "/available/agents",method = RequestMethod.GET)
+    public EduResponse findPlayerAvailable(@ApiParam(value = "玩家ID")@RequestParam(value = "id") Long id){
+        return EduResponse.succResponse(playerService.findAvailableAgent(id));
+    }
+
+    /**
+     * 转 request 为  playerDTO
+     * @param request
+     * @return PlayerDTO
+     */
     private PlayerDTO convertRequest2DTO(PlayerRequest request){
+        if (request == null){
+            return null;
+        }
         PlayerDTO dto = new PlayerDTO();
-        BeanUtil.copyProperties(request,dto);
+        dto.setWeChatId(request.getWeChatId());
+        dto.setWeChatName(request.getWeChatName());
+        dto.setNickName(request.getNickName());
+        dto.setSex(request.getSex());
+        dto.setSuperLeverCount(request.getSuperLeverCount());
+        dto.setGoldCount(new BigDecimal(request.getGoldCount()));
+        dto.setMoneyCount(new BigDecimal(request.getMoneyCount()));
         return dto;
     }
+
 }

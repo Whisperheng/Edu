@@ -10,14 +10,14 @@ import org.apache.ibatis.annotations.Select;
 public interface UserMapper {
 
     @Select("<script>"+
-            "SELECT * from user "+
+            "SELECT * from h_user "+
             "WHERE id = #{id} "+
             "</script>"
     )
     UserEntity findUserById(@Param("id")Long id);
 
     @Select("<script>"+
-            " select * from user "+
+            " select * from h_user "+
             " where "+
             "<if test = 'id != null'> id = #{id} </if> "+
             "<if test = 'userName != null'> user_name = #{userName} </if>"+
@@ -27,7 +27,7 @@ public interface UserMapper {
                                    @Param("userName")String userName) ;
 
     @Insert("<script>"+
-            " insert into user ( id , user_name , nick_name , password ,phone " +
+            " insert into h_user ( id , user_name , nick_name , password ,phone " +
             " <if test = 'entity.sex != null'> , sex </if>" +
             " , status) " +
             " VALUES (#{entity.id} , #{entity.userName} ,#{entity.nickName} ,#{entity.password} ,#{entity.phone} ," +
