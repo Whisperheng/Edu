@@ -18,7 +18,7 @@ import java.math.BigDecimal;
 
 @RestController
 @CrossOrigin
-@RequestMapping(value = "/player" )
+@RequestMapping(value = "/players" )
 @Api(description = "玩家相关 api")
 public class PlayerController {
 
@@ -27,19 +27,25 @@ public class PlayerController {
 
 
     @ApiOperation(value = "查找玩家",notes = "查找玩家")
-    @RequestMapping(value = "/{id}" ,method = RequestMethod.GET)
+    @RequestMapping(value = "/player/{id}" ,method = RequestMethod.GET)
     public EduResponse findPlayerById(@ApiParam(value = "玩家id")@PathVariable(value = "id") Long id){
         return EduResponse.succResponse(playerService.findPlayerById(id));
     }
 
 
     @ApiOperation(value = "查找玩家列表",notes = "查找玩家列表")
-    @RequestMapping(value = "/players" ,method = RequestMethod.GET)
+    @RequestMapping(value = "" ,method = RequestMethod.GET)
     public EduResponse findPlayersByCondition(@ApiParam(value = "代理等级")@RequestParam(value = "agentLever",required = false)AgentLever agentLever,
                                               @ApiParam(value = "在线状态")@RequestParam(value = "onLineStatus",required = false)OnLineStatus onLineStatus,
                                               @ApiParam(value = "玩家状态")@RequestParam(value = "playerStatus",required = false)PlayStatus playStatus){
 
         return EduResponse.succResponse(playerService.findPlayersByCondition(agentLever,onLineStatus,playStatus));
+    }
+
+
+    @RequestMapping(value = "/summary" ,method = RequestMethod.GET)
+    public EduResponse findPlayerSummary(){
+        return EduResponse.succResponse(playerService.findPlayerSummary());
     }
 
 

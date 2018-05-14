@@ -4,6 +4,7 @@ import com.hank_01.edu.Entity.PlayerEntity;
 import com.hank_01.edu.common.util.CollectionUtil;
 import com.hank_01.edu.dao.PlayerDao;
 import com.hank_01.edu.dto.PlayerDTO;
+import com.hank_01.edu.dto.PlayerSummaryDTO;
 import com.hank_01.edu.enums.AgentLever;
 import com.hank_01.edu.enums.OnLineStatus;
 import com.hank_01.edu.enums.PlayStatus;
@@ -181,6 +182,24 @@ public class PlayerServiceImpl implements PlayerService {
         agentLeverList.add(agentLever);
         return agentLeverList;
 
+    }
+
+    @Override
+    public PlayerSummaryDTO findPlayerSummary() {
+
+        PlayerSummaryDTO summaryDTO = new PlayerSummaryDTO();
+        List<PlayerEntity> playerEntityList1 = playerDao.findPlayersByCondition(AgentLever.LEVER_NULL,OnLineStatus.ONLINE,null);
+        summaryDTO.setOnLinePlayerCount((long)playerEntityList1.size());
+        List<PlayerEntity> playerEntityList2 = playerDao.findPlayersByCondition(null,null,null);
+        //  商家代理不是玩家
+        summaryDTO.setPlayerCount((long) (playerEntityList2.size()-1));
+        List<PlayerEntity> playerEntityList3 = playerDao.findPlayersByCondition(AgentLever.LEVER_1,null,null);
+        summaryDTO.setAgent_lever1Count((long)playerEntityList3.size());
+        List<PlayerEntity> playerEntityList4 = playerDao.findPlayersByCondition(AgentLever.LEVER_2,null,null);
+        summaryDTO.setAgent_lever2Count((long)playerEntityList4.size());
+        List<PlayerEntity> playerEntityList5 = playerDao.findPlayersByCondition(AgentLever.LEVER_3,null,null);
+        summaryDTO.setAgent_lever3Count((long)playerEntityList5.size());
+        return summaryDTO;
     }
 
     /**

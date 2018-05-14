@@ -1,6 +1,7 @@
 package com.hank_01.edu.service;
 
 import com.hank_01.edu.dto.PlayerDTO;
+import com.hank_01.edu.dto.PlayerSummaryDTO;
 import com.hank_01.edu.enums.AgentLever;
 import com.hank_01.edu.enums.OnLineStatus;
 import com.hank_01.edu.enums.PlayStatus;
@@ -65,5 +66,11 @@ public interface PlayerService {
      * @return List<AgentLever> 可申请的代理列表
      */
     List<AgentLever> findAvailableAgent(Long id);
+
+    /**
+     * 查询玩家统计信息
+     * @return
+     */
+    PlayerSummaryDTO findPlayerSummary();
 
 }

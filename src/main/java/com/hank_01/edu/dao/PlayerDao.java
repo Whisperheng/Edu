@@ -58,4 +58,5 @@ public interface PlayerDao {
      * @return Boolean 更新结果
      */
     Boolean updatePlayerStatusById(Long id ,PlayStatus newPlayStatus);
+
 }

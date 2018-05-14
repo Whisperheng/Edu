@@ -53,7 +53,7 @@ public class UserServiceImpl implements UserService {
         }
         UserDTO userDTO = new UserDTO();
         userDTO.convertfrom(entity);
-        LOG.info("已找到用户。。。。。。。。。");
+        LOG.info("已找到用户----"+userName);
         return userDTO;
     }
 
@@ -64,11 +64,16 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Boolean loginByUserAndPassword(String userName, String password) {
+        LOG.info("loginByUserAndPassword");
         UserDTO dto = this.findUserByCondition(null,userName);
         if (dto == null){
             throw new EduException(UserErrorEnum.USER_COUNT_NOT_EXISTED);
         }
-        return dto.getPassword().equals(password);
+        LOG.info("loginByUserAndPassword2");
+        if (!dto.getPassword().equals(password)){
+            throw new EduException(UserErrorEnum.PASSWORD_ERROR);
+        }
+        return true;
     }
 
     private void validate(UserDTO dto){

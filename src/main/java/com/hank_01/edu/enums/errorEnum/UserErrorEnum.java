@@ -7,6 +7,7 @@ public enum UserErrorEnum implements IEduException{
     USER_COUNT_NOT_EXISTED(1002,"该用户账号不存在"),
     USER_COUNT_ALREADY_EXISTED(1003,"该用户名已注册，请更换用户名后重试"),
     CELLPHONE_IS_INVALID(1004,"手机号错误，请输入正确的手机号"),
+    PASSWORD_ERROR(1005,"登录密码错误！请确认后重试"),
     ;
 
     private int errorCode;
