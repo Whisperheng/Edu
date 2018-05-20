@@ -44,20 +44,17 @@ public class PlayerDaoImpl implements PlayerDao {
     }
 
     @Override
-    public List<PlayerEntity> findPlayersByCondition(AgentLever agentLever, OnLineStatus onLineStatus, PlayStatus playStatus) {
+    public List<PlayerEntity> findPlayersByCondition(Boolean agentFlag, OnLineStatus onLineStatus, PlayStatus playStatus) {
         String agentTypeName = null;
         String onLineStatusName = null;
         String playerStatusName = null;
-        if (agentLever != null){
-            agentTypeName = agentLever.getName();
-        }
         if (onLineStatus != null){
             onLineStatusName = onLineStatus.getName();
         }
         if (playStatus != null){
             playerStatusName = playStatus.getName();
         }
-        return playerMapper.findPlayersByCondition(agentTypeName,onLineStatusName,playerStatusName);
+        return playerMapper.findPlayersByCondition(agentFlag,onLineStatusName,playerStatusName);
     }
 
     @Override
@@ -70,8 +67,8 @@ public class PlayerDaoImpl implements PlayerDao {
     }
 
     @Override
-    public Boolean updatePlayerAgentTypeById(Long id, AgentLever newAgentLever ,Long superLeverCount ,String superLeverName ,AgentLever superAgentLever) {
-        if (id == null || newAgentLever == null ){
+    public Boolean updatePlayerAgentTypeById(Long id, Boolean agentFlag ,Long superLeverCount ,String superLeverName ) {
+        if (id == null || agentFlag == null ){
             LOG.info("玩家代理等级更新失败，新代理等级为空或ID为空");
             return false;
         }
@@ -79,10 +76,7 @@ public class PlayerDaoImpl implements PlayerDao {
         if (entity ==null){
             throw new EduException(PlayerError.PLAYER_DOES_NOT_EXISTED);
         }
-        if (entity.getAgentLever() != AgentLever.LEVER_NULL){
-            throw new EduException(PlayerError.CAN_NOT_CHANGE_AGENT_LEVER);
-        }
-        return playerMapper.updatePlayerAgentTypeById(id, newAgentLever ,superLeverCount,superLeverName,superAgentLever);
+        return playerMapper.updatePlayerAgentTypeById(id, agentFlag ,superLeverCount,superLeverName);
     }
 
     @Override

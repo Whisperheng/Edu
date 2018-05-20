@@ -64,12 +64,10 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Boolean loginByUserAndPassword(String userName, String password) {
-        LOG.info("loginByUserAndPassword");
         UserDTO dto = this.findUserByCondition(null,userName);
         if (dto == null){
             throw new EduException(UserErrorEnum.USER_COUNT_NOT_EXISTED);
         }
-        LOG.info("loginByUserAndPassword2");
         if (!dto.getPassword().equals(password)){
             throw new EduException(UserErrorEnum.PASSWORD_ERROR);
         }

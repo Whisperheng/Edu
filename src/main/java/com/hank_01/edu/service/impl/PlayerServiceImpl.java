@@ -16,6 +16,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 @Service
@@ -29,13 +30,16 @@ public class PlayerServiceImpl implements PlayerService {
     @Override
     public Boolean createPlayer(PlayerDTO dto) {
 
+        dto.setSuperLeverCount(1L);
+        dto.setSuperLeverName("商家");
         if (dto.getSuperLeverCount() != null){
             PlayerDTO superLever = this.findPlayerById(dto.getSuperLeverCount());
-            if (superLever == null){
-                throw new EduException(PlayerError.SUPER_LEVER_COUNT_IS_INVALID);
+            dto.setSuperLeverCount(null);
+            dto.setSuperLeverName(null);
+            if (superLever != null ){
+                dto.setSuperLeverCount(superLever.getId());
+                dto.setSuperLeverName(superLever.getNickName());
             }
-            dto.setSuperLeverName(superLever.getNickName());
-            dto.setSuperAgentLever(superLever.getAgentLever());
         }
 
         return playerDao.createPlayer(dto.convert2Entity());
@@ -56,8 +60,8 @@ public class PlayerServiceImpl implements PlayerService {
     }
 
     @Override
-    public List<PlayerDTO> findPlayersByCondition(AgentLever agentLever, OnLineStatus onLineStatus, PlayStatus playStatus) {
-        List<PlayerEntity> playerEntityList = playerDao.findPlayersByCondition(agentLever,onLineStatus,playStatus);
+    public List<PlayerDTO> findPlayersByCondition(Boolean agentFlag, OnLineStatus onLineStatus, PlayStatus playStatus) {
+        List<PlayerEntity> playerEntityList = playerDao.findPlayersByCondition(agentFlag,onLineStatus,playStatus);
         if (CollectionUtil.isEmpty(playerEntityList)){
             return null;
         }
@@ -79,72 +83,30 @@ public class PlayerServiceImpl implements PlayerService {
     }
 
     @Override
-    public Boolean updatePlayerAgentTypeById(Long id, AgentLever newAgentLever) {
+    public Boolean updatePlayerAgentTypeById(Long id ,Long superLeverCount) {
         if (id == null ){
-            LOG.info("更改代理等级失败 ：参数错误，更新玩家代理状态时ID为空 。");
+            LOG.error("加入代理失败 ：参数错误，更新玩家代理状态时ID为空 。");
             return false;
         }
-        if (AgentLever.LEVER_SUPER == newAgentLever ){
-            LOG.info("更改代理等级失败 ：未经许可，不能成为商家代理 ");
+        if (superLeverCount == null){
+            LOG.error("加入代理失败 ：参数错误，更新玩家代理状态时上级代理账户为空 。");
             return false;
         }
+        PlayerDTO superAgent = this.findPlayerById(superLeverCount);
+        if (superAgent == null){
+            LOG.error("加入代理失败 ：上级代理账户无效。");
+            return false;
+        }
+
         PlayerDTO playerDTO = this.findPlayerById(id);
         if (playerDTO == null){
             throw new EduException(PlayerError.PLAYER_DOES_NOT_EXISTED);
         }
-        if (playerDTO.getAgentLever() != AgentLever.LEVER_NULL){
-            throw new EduException(PlayerError.CAN_NOT_CHANGE_AGENT_LEVER);
-        }
-        if (playerDTO.getSuperLeverCount() != null){
-            newAgentLever = this.getRightAgentLever(playerDTO.getAgentLever());
-        }
-
-        Boolean qualificationResult = this.agentQualification(id,newAgentLever);
-        if (! qualificationResult){
+        Boolean qualificationResult = this.agentQualification(id);
+        if (!qualificationResult){
             throw new EduException(PlayerError.QUALIFICATION_AGENT_FAIL);
         }
-
-        Long superLeverCount = this.getRightSuperCount(newAgentLever);
-        PlayerDTO superAgent = this.findPlayerById(superLeverCount);
-        return playerDao.updatePlayerAgentTypeById(id, newAgentLever ,superLeverCount ,superAgent.getNickName(),superAgent.getAgentLever());
-    }
-
-    private Long getRightSuperCount(AgentLever selfAgentLever){
-        switch (selfAgentLever){
-            case LEVER_1:
-                return 1L;
-            case LEVER_2:
-                return 2L;
-            case LEVER_3:
-                return 3L;
-            default:
-                return null;
-        }
-    }
-
-    /**
-     * 根据自己的上级代理来确定自己的可申请的代理 级别
-     * @param superAgentLever
-     * @return AgentLever
-     */
-    private AgentLever getRightAgentLever(AgentLever superAgentLever){
-        if (superAgentLever == null){
-            return null;
-        }
-        switch (superAgentLever){
-            case LEVER_NULL:
-                return null;
-            case LEVER_1:
-                return AgentLever.LEVER_2;
-            case LEVER_2:
-                return AgentLever.LEVER_3;
-            case LEVER_3:
-                return null;
-            case LEVER_SUPER:
-                return AgentLever.LEVER_1;
-            default:
-                return null;
-        }
+        return playerDao.updatePlayerAgentTypeById(id, true ,superLeverCount ,superAgent.getNickName());
     }
 
     @Override
@@ -152,84 +114,43 @@ public class PlayerServiceImpl implements PlayerService {
         return null;
     }
 
-    @Override
-    public List<AgentLever> findAvailableAgent(Long id) {
 
-        if (id == null){
-           throw new EduException(PlayerError.PARAMETER_ERROR);
-        }
-
-        List<AgentLever> agentLeverList = new ArrayList<>();
-        PlayerDTO dto = this.findPlayerById(id);
-        if (dto == null){
-           throw new EduException(PlayerError.PLAYER_DOES_NOT_EXISTED);
-        }
-        if (dto.getSuperLeverCount() == null){
-            agentLeverList.add(AgentLever.LEVER_1);
-            agentLeverList.add(AgentLever.LEVER_2);
-            agentLeverList.add(AgentLever.LEVER_3);
-            return agentLeverList;
-        }
-        PlayerDTO superPlayer = this.findPlayerById(id);
-        if (superPlayer == null ){
-            agentLeverList.add(AgentLever.LEVER_1);
-            agentLeverList.add(AgentLever.LEVER_2);
-            agentLeverList.add(AgentLever.LEVER_3);
-            LOG.debug("玩家上级账户不存在，将玩家上级设为空");
-            return agentLeverList;
-        }
-        AgentLever agentLever = this.getRightAgentLever(superPlayer.getAgentLever());
-        agentLeverList.add(agentLever);
-        return agentLeverList;
-
-    }
 
     @Override
     public PlayerSummaryDTO findPlayerSummary() {
 
         PlayerSummaryDTO summaryDTO = new PlayerSummaryDTO();
-        List<PlayerEntity> playerEntityList1 = playerDao.findPlayersByCondition(AgentLever.LEVER_NULL,OnLineStatus.ONLINE,null);
-        summaryDTO.setOnLinePlayerCount((long)playerEntityList1.size());
+        List<PlayerEntity> playerEntityList1 = playerDao.findPlayersByCondition(false,OnLineStatus.ONLINE,null);
+        if (CollectionUtil.isNotEmpty(playerEntityList1)) {
+            summaryDTO.setOnLinePlayerCount((long)playerEntityList1.size());
+        }
         List<PlayerEntity> playerEntityList2 = playerDao.findPlayersByCondition(null,null,null);
-        //  商家代理不是玩家
-        summaryDTO.setPlayerCount((long) (playerEntityList2.size()-1));
-        List<PlayerEntity> playerEntityList3 = playerDao.findPlayersByCondition(AgentLever.LEVER_1,null,null);
-        summaryDTO.setAgent_lever1Count((long)playerEntityList3.size());
-        List<PlayerEntity> playerEntityList4 = playerDao.findPlayersByCondition(AgentLever.LEVER_2,null,null);
-        summaryDTO.setAgent_lever2Count((long)playerEntityList4.size());
-        List<PlayerEntity> playerEntityList5 = playerDao.findPlayersByCondition(AgentLever.LEVER_3,null,null);
-        summaryDTO.setAgent_lever3Count((long)playerEntityList5.size());
+        if (CollectionUtil.isNotEmpty(playerEntityList2)){
+            summaryDTO.setPlayerCount((long)playerEntityList2.size());
+        }
+        List<PlayerEntity> agentList = playerDao.findPlayersByCondition(true,null,null);
+        if (CollectionUtil.isNotEmpty(agentList)){
+            summaryDTO.setAgentCount((long)agentList.size());
+        }
         return summaryDTO;
     }
 
     /**
      * 验证是否具有成为所申请代理的资格
-     * 一级代理 ：700 金币 ， 二级代理 ： 500金币 ， 三级代理 ： 300金币
      * @param id
-     * @param newAgentLever
      * @return Boolean
      */
-    private Boolean agentQualification(Long id, AgentLever newAgentLever) {
-        if (id == null  || newAgentLever == null){
-            return false;
-        }
-        if (AgentLever.LEVER_SUPER == newAgentLever ){
-            LOG.info("更改代理等级失败 ：未经许可，不能成为商家代理 ");
+    public Boolean agentQualification(Long id) {
+        if (id == null ){
             return false;
         }
         PlayerDTO playerDTO = this.findPlayerById(id);
         if (playerDTO == null){
             throw new EduException(PlayerError.PLAYER_DOES_NOT_EXISTED);
         }
-        switch (newAgentLever){
-            case LEVER_1:
-                return playerDTO.getGoldCount().intValue() >= 700;
-            case LEVER_2:
-                return playerDTO.getGoldCount().intValue() >= 500;
-            case LEVER_3:
-                return playerDTO.getGoldCount().intValue() >= 300;
-            default:
-                return false;
+        if (playerDTO.getGoldCount().compareTo(new BigDecimal(300L))<0){
+            throw new EduException(PlayerError.GOLD_COUNT_IS_NOT_ENOUGH);
         }
+        return true;
     }
 }

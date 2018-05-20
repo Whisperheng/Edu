@@ -15,10 +15,9 @@ public class PlayerEntity extends BaseEntity{
     private OnLineStatus onLineStatus;
     private BigDecimal moneyCount;
     private BigDecimal goldCount;
-    private AgentLever agentLever;
+    private Boolean agentFlag;
     private Long superLeverCount;
     private String superLeverName;
-    private AgentLever superAgentLever;
 
     public String getWeChatId() {
         return weChatId;
@@ -84,14 +83,6 @@ public class PlayerEntity extends BaseEntity{
         this.goldCount = goldCount;
     }
 
-    public AgentLever getAgentLever() {
-        return agentLever;
-    }
-
-    public void setAgentLever(AgentLever agentLever) {
-        this.agentLever = agentLever;
-    }
-
     public Long getSuperLeverCount() {
         return superLeverCount;
     }
@@ -108,11 +99,11 @@ public class PlayerEntity extends BaseEntity{
         this.superLeverName = superLeverName;
     }
 
-    public AgentLever getSuperAgentLever() {
-        return superAgentLever;
+    public Boolean getAgentFlag() {
+        return agentFlag;
     }
 
-    public void setSuperAgentLever(AgentLever superAgentLever) {
-        this.superAgentLever = superAgentLever;
+    public void setAgentFlag(Boolean agentFlag) {
+        this.agentFlag = agentFlag;
     }
 }

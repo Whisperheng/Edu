@@ -73,65 +73,105 @@ public class OrderServiceImpl implements OrderService {
         if (orderEntity.getStatus() == OrderStatus.SUCCESS){
             throw new EduException(OrderError.ORDER_ALREADY_FINISH);
         }
+        //完成订单 更改订单状态
         Boolean finishResult = orderDao.updateOrderStatusById(id , OrderStatus.SUCCESS);
         if (!finishResult){
             throw new EduException(OrderError.FINISH_ERROR);
         }
         PlayerDTO playerDTO = playerService.findPlayerById(orderEntity.getPlayerId());
+        if (playerDTO == null){
+            throw new EduException(OrderError.INVALID_ORDER_PLAYER_INVALID);
+        }
+        if (playerDTO.getMoneyCount().compareTo(orderEntity.getOrderPrice())<0){
+            throw new EduException(OrderError.MONEY_NOT_ENOUGH);
+        }
+        // 将玩家购买的金币到账
         playerDTO.setGoldCount(playerDTO.getGoldCount().add(orderEntity.getGoldCount()));
+        playerDTO.setMoneyCount(playerDTO.getMoneyCount().subtract(orderEntity.getOrderPrice()));
         Boolean goldResult = playerService.updatePlayer(playerDTO);
         if (!goldResult){
             throw new EduException(OrderError.ADD_GOLD_COUNT_ERROR);
         }
-        if (playerDTO.getSuperAgentLever() == null){
-            this.allocOrderMoney2Player(1L,orderEntity.getOrderPrice(),orderEntity);
-            LOG.debug("无上级，佣金直接给商家");
-            return true;
+        // 分佣 为对应的上级分佣
+        if (playerDTO.getSuperLeverCount() == null){
+            playerDTO.setSuperLeverCount(1L);
+            playerDTO.setSuperLeverName("商家");
         }
-        switch (playerDTO.getSuperAgentLever()){
+        this.allocCommission(playerDTO,orderEntity);
+        return true;
+    }
 
-            case LEVER_SUPER:
-                this.allocOrderMoney2Player(playerDTO.getSuperLeverCount(),orderEntity.getOrderPrice(),orderEntity);
-                LOG.debug("一级代理购买或代理商为商家的普通玩家购买，佣金直接给商家");
-                return true;
-            case LEVER_1:
-                Long superCount = this.allocOrderMoney2Player(playerDTO.getSuperLeverCount(),
-                        orderEntity.getOrderPrice().multiply(new BigDecimal(0.8D)),orderEntity);
-                LOG.debug("二级代理购买或代理商为一级代理的普通玩家购买，佣金给一级代理0.8");
-                this.allocOrderMoney2Player(superCount,orderEntity.getOrderPrice().multiply(new BigDecimal(0.2D)),orderEntity);
-                LOG.debug("二级代理购买或代理商为一级代理的普通玩家购买，佣金给商家0.2");
-                return true;
-            case LEVER_2:
-                Long lever1Count = this.allocOrderMoney2Player(playerDTO.getSuperLeverCount(),
-                        orderEntity.getOrderPrice().multiply(new BigDecimal(0.72D)),orderEntity);
-                LOG.debug("三级代理或代理商为二级代理的普通玩家购买，佣金给二级代理0.72");
-                Long superCount2 = this.allocOrderMoney2Player(lever1Count,
-                        orderEntity.getOrderPrice().multiply(new BigDecimal(0.2D)),orderEntity);
-                LOG.debug("三级代理或代理商为二级代理的普通玩家购买，佣金给一级代理0.2");
-                this.allocOrderMoney2Player(superCount2,orderEntity.getOrderPrice().multiply(new BigDecimal(0.08D)),orderEntity);
-                LOG.debug("三级代理或代理商为二级代理的普通玩家购买，佣金给商家0.08");
-                return true;
-            case LEVER_3:
-                Long lever2Count = this.allocOrderMoney2Player(playerDTO.getSuperLeverCount(),
-                        orderEntity.getOrderPrice().multiply(new BigDecimal(0.7D)),orderEntity);
-                LOG.debug("普通玩家（三级代理商推荐）购买，佣金给三级代理0.7");
-                Long lever1Count2 = this.allocOrderMoney2Player(lever2Count,
-                        orderEntity.getOrderPrice().multiply(new BigDecimal(0.2D)),orderEntity);
-                LOG.debug("普通玩家（三级代理商推荐）购买，佣金给二级代理0.2");
-                Long superCount3 = this.allocOrderMoney2Player(lever1Count2,
-                        orderEntity.getOrderPrice().multiply(new BigDecimal(0.08D)),orderEntity);
-                LOG.debug("普通玩家（三级代理商推荐）购买，佣金给一级代理0.08");
-                this.allocOrderMoney2Player(superCount3,orderEntity.getOrderPrice().multiply(new BigDecimal(0.02D)),orderEntity);
-                LOG.debug("普通玩家（三级代理商推荐）购买，佣金给三级代理0.02");
-                return true;
-            default:
-                this.allocOrderMoney2Player(1L,orderEntity.getOrderPrice(),orderEntity);
-                LOG.debug("默认为代理商为商家的普通玩家购买，佣金直接给商家");
-                return true;
+    /**
+     * 完成佣金分配，订单购买金额和虚拟商品充值
+     * @param playerDTO
+     * @param orderEntity
+     */
+    private void allocCommission(PlayerDTO playerDTO,OrderEntity orderEntity){
+        if (playerDTO == null || orderEntity == null ){
+            LOG.error("参数错误。 分佣时错误 ");
+            return;
         }
+        if (playerDTO.getSuperLeverCount() == null){
+            playerDTO.setSuperLeverCount(1L);
+        }
+        PlayerDTO agentPlayer1 = playerService.findPlayerById(playerDTO.getSuperLeverCount());
+        if (agentPlayer1 == null){
+            throw new EduException(OrderError.SUPER_LEVER_ERROR_WHEN_ALLOC);
+        }
+        if (agentPlayer1.getId() == 1L){
+            agentPlayer1.setMoneyCount(agentPlayer1.getMoneyCount().add(orderEntity.getOrderPrice()));
+            playerService.updatePlayer(agentPlayer1);
+            this.insertCommissionLog(orderEntity,agentPlayer1,new BigDecimal(1));
+            return;
+        }
+        agentPlayer1.setMoneyCount(agentPlayer1.getMoneyCount().add(orderEntity.getOrderPrice().multiply(new BigDecimal(0.7))));
+        playerService.updatePlayer(agentPlayer1);
+        this.insertCommissionLog(orderEntity,agentPlayer1,new BigDecimal(0.7));
+        if (agentPlayer1.getSuperLeverCount() == null){
+            throw new EduException(OrderError.SUPER_LEVER_ERROR_WHEN_ALLOC);
+        }
+        PlayerDTO agentPlayer2 = playerService.findPlayerById(agentPlayer1.getSuperLeverCount());
+        if (agentPlayer2 == null){
+            throw new EduException(OrderError.SUPER_LEVER_ERROR_WHEN_ALLOC);
+        }
+        if (agentPlayer2.getId() == 1L){
+            agentPlayer2.setMoneyCount(agentPlayer2.getMoneyCount().add(orderEntity.getOrderPrice().multiply(new BigDecimal(0.3))));
+            playerService.updatePlayer(agentPlayer2);
+            this.insertCommissionLog(orderEntity,agentPlayer2,new BigDecimal(0.3));
+            return;
+        }
+        agentPlayer2.setMoneyCount(agentPlayer2.getMoneyCount().add(orderEntity.getOrderPrice().multiply(new BigDecimal(0.2))));
+        playerService.updatePlayer(agentPlayer2);
+        this.insertCommissionLog(orderEntity,agentPlayer2,new BigDecimal(0.2));
+        PlayerDTO agentPlayer3 = playerService.findPlayerById(1L);
+        agentPlayer3.setMoneyCount(agentPlayer3.getMoneyCount().add(orderEntity.getOrderPrice().multiply(new BigDecimal(0.1))));
+        playerService.updatePlayer(agentPlayer3);
+        this.insertCommissionLog(orderEntity,agentPlayer3,new BigDecimal(0.1));
 
     }
 
+    /**
+     * 插入佣金日志
+     * @param orderEntity
+     * @param agentPlayer
+     * @param commissionRate
+     */
+    private void insertCommissionLog(OrderEntity orderEntity , PlayerDTO agentPlayer ,BigDecimal commissionRate){
+        if (orderEntity == null || agentPlayer == null){
+            LOG.error("插入分佣日志时出错！");
+            return;
+        }
+        CommLogDTO commLogDTO = new CommLogDTO();
+        commLogDTO.setPayPlayerId(orderEntity.getPlayerId());
+        commLogDTO.setOrderId(orderEntity.getId());
+        commLogDTO.setAgentPlayerId(agentPlayer.getId());
+        commLogDTO.setOrderPrice(orderEntity.getOrderPrice());
+        if (orderEntity.getGoldCount() != null){
+            commLogDTO.setOrderGoldAmount(orderEntity.getGoldCount().longValue());
+        }
+        commLogDTO.setRewardAmount(orderEntity.getOrderPrice().multiply(commissionRate));
+        commLogService.insertCommLog(commLogDTO);
+    }
     /**
      * 订单提成 分配
      * @param agentPlayerId 玩家上级id

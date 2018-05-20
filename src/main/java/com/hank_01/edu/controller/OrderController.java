@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import java.math.BigDecimal;
 
 @RestController
-@RequestMapping(value = "/order")
+@RequestMapping(value = "/orders")
 @Api(value = "订单相关api")
 @CrossOrigin
 public class OrderController {
@@ -22,7 +22,7 @@ public class OrderController {
     private OrderService orderService;
 
     @ApiOperation(value = "创建新订单")
-    @RequestMapping(value = "",method = RequestMethod.POST)
+    @RequestMapping(value = "/insert",method = RequestMethod.POST)
     public EduResponse createOrder(@ApiParam(value = "玩家id")@RequestParam(value = "playerId") Long playerId,
                                    @ApiParam(value = "玩家购买金币数量")@RequestParam(value = "goldCount") Long goldCount,
                                    @ApiParam(value = "订单金额")@RequestParam(value = "orderPrice") Long orderPrice){
@@ -34,19 +34,19 @@ public class OrderController {
     }
 
     @ApiOperation(value = "查找指定订单详情")
-    @RequestMapping(value = "",method = RequestMethod.GET)
-    public EduResponse findOrder(@ApiParam(value = "订单id")@RequestParam(value = "orderId") Long orderId){
+    @RequestMapping(value = "/order/{orderId}",method = RequestMethod.GET)
+    public EduResponse findOrder(@ApiParam(value = "订单id")@PathVariable(value = "orderId") Long orderId){
         return EduResponse.succResponse(orderService.findOrderById(orderId));
     }
 
     @ApiOperation(value = "完成订单 / 支付订单")
-    @RequestMapping(value = "/finish",method = RequestMethod.PUT)
-    public EduResponse finishOrder(@ApiParam(value = "订单id")@RequestParam(value = "orderId") Long orderId){
+    @RequestMapping(value = "/order/{orderId}/finish",method = RequestMethod.PUT)
+    public EduResponse finishOrder(@ApiParam(value = "订单id")@PathVariable(value = "orderId") Long orderId){
         return EduResponse.succResponse(orderService.finishOrder(orderId));
     }
 
     @ApiOperation(value = "根据条件查找订单列表")
-    @RequestMapping(value = "/orders",method = RequestMethod.GET)
+    @RequestMapping(value = "",method = RequestMethod.GET)
     public EduResponse findOrdersByCondition(@ApiParam("订单id")@RequestParam(value = "orderId",required = false)Long orderId,
                                              @ApiParam("玩家id")@RequestParam(value = "playerId",required = false)Long playerId,
                                              @ApiParam("订单状态")@RequestParam(value = "status",required = false)OrderStatus status){

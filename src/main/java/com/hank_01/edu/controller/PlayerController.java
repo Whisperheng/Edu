@@ -35,11 +35,11 @@ public class PlayerController {
 
     @ApiOperation(value = "查找玩家列表",notes = "查找玩家列表")
     @RequestMapping(value = "" ,method = RequestMethod.GET)
-    public EduResponse findPlayersByCondition(@ApiParam(value = "代理等级")@RequestParam(value = "agentLever",required = false)AgentLever agentLever,
+    public EduResponse findPlayersByCondition(@ApiParam(value = "代理等级")@RequestParam(value = "agentFlag",required = false)Boolean agentFlag,
                                               @ApiParam(value = "在线状态")@RequestParam(value = "onLineStatus",required = false)OnLineStatus onLineStatus,
                                               @ApiParam(value = "玩家状态")@RequestParam(value = "playerStatus",required = false)PlayStatus playStatus){
 
-        return EduResponse.succResponse(playerService.findPlayersByCondition(agentLever,onLineStatus,playStatus));
+        return EduResponse.succResponse(playerService.findPlayersByCondition(agentFlag,onLineStatus,playStatus));
     }
 
 
@@ -56,11 +56,11 @@ public class PlayerController {
     }
 
 
-    @ApiOperation(value = "更新玩家代理等级",notes = "更新玩家代理等级")
+    @ApiOperation(value = "申请玩家代理等级",notes = "申请玩家代理等级")
     @RequestMapping(value = "/agent" ,method = RequestMethod.PUT)
     public EduResponse updatePlayerAgentLeverById(@ApiParam(value = "玩家ID")@RequestParam(value = "id")Long id,
-                                                  @ApiParam(value = "代理等级")@RequestParam(value = "agentLever",required = false)AgentLever agentLever){
-        return EduResponse.succResponse(playerService.updatePlayerAgentTypeById(id,agentLever));
+                                                  @ApiParam(value = "代理ID")@RequestParam(value = "agentCount")Long agentCount){
+        return EduResponse.succResponse(playerService.updatePlayerAgentTypeById(id,agentCount));
     }
 
 
@@ -73,7 +73,7 @@ public class PlayerController {
     @ApiOperation(value = "查找玩家可申请代理列表",notes = "查找玩家可申请代理列表")
     @RequestMapping(value = "/available/agents",method = RequestMethod.GET)
     public EduResponse findPlayerAvailable(@ApiParam(value = "玩家ID")@RequestParam(value = "id") Long id){
-        return EduResponse.succResponse(playerService.findAvailableAgent(id));
+        return EduResponse.succResponse(playerService.agentQualification(id));
     }
 
     /**

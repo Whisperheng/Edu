@@ -19,10 +19,9 @@ public class PlayerDTO {
     private OnLineStatus onLineStatus;
     private BigDecimal moneyCount;
     private BigDecimal goldCount;
-    private AgentLever agentLever;
+    private Boolean agentFlag;
     private Long superLeverCount;
     private String superLeverName;
-    private AgentLever superAgentLever;
     private Date createTime;
     private Date updateTime;
     private Boolean isDeleted;
@@ -112,12 +111,12 @@ public class PlayerDTO {
         this.goldCount = goldCount;
     }
 
-    public AgentLever getAgentLever() {
-        return agentLever;
+    public Boolean getAgentFlag() {
+        return agentFlag;
     }
 
-    public void setAgentLever(AgentLever agentLever) {
-        this.agentLever = agentLever;
+    public void setAgentFlag(Boolean agentFlag) {
+        this.agentFlag = agentFlag;
     }
 
     public Long getSuperLeverCount() {
@@ -134,14 +133,6 @@ public class PlayerDTO {
 
     public void setSuperLeverName(String superLeverName) {
         this.superLeverName = superLeverName;
-    }
-
-    public AgentLever getSuperAgentLever() {
-        return superAgentLever;
-    }
-
-    public void setSuperAgentLever(AgentLever superAgentLever) {
-        this.superAgentLever = superAgentLever;
     }
 
     public Date getCreateTime() {

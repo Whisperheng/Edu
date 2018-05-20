@@ -25,12 +25,12 @@ public interface PlayerDao {
 
     /**
      * 根据条件查询玩家列表
-     * @param agentLever 代理等级
+     * @param agentFlag 代理标识
      * @param onLineStatus 在线状态
      * @param playStatus 玩家账户状态
      * @return List<PlayerEntity>
      */
-    List<PlayerEntity> findPlayersByCondition(AgentLever agentLever,
+    List<PlayerEntity> findPlayersByCondition(Boolean agentFlag,
                                               OnLineStatus onLineStatus ,
                                               PlayStatus playStatus);
 
@@ -44,13 +44,12 @@ public interface PlayerDao {
     /**
      * 改变玩家代理等级相关信息
      * @param id 玩家id
-     * @param newAgentLever 要申请的代理等级
+     * @param agentFlag 是否代理标识
      * @param superLeverCount 上级账号
      * @param superLeverName 上级昵称
-     * @param superAgentLever 上级等级
      * @return boolean 申请结果
      */
-    Boolean updatePlayerAgentTypeById(Long id, AgentLever newAgentLever,Long superLeverCount ,String superLeverName,AgentLever superAgentLever );
+    Boolean updatePlayerAgentTypeById(Long id, Boolean agentFlag,Long superLeverCount ,String superLeverName);
     /**
      * 根据ID改变玩家玩家状态
      * @param id 玩家id
